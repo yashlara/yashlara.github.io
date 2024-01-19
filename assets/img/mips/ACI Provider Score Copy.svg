@@ -1,0 +1,584 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1183" height="958" style="background:#fff" viewBox="0 0 1183 958">
+  <defs>
+    <circle id="aci-provider-score-copy-a" cx="13" cy="13" r="13"/>
+    <rect id="aci-provider-score-copy-c" width="385.668" height="48"/>
+    <filter id="aci-provider-score-copy-b" width="100.8%" height="106.2%" x="-.4%" y="-3.1%" filterUnits="objectBoundingBox">
+      <feOffset dy="-3" in="SourceAlpha" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0"/>
+    </filter>
+    <rect id="aci-provider-score-copy-e" width="1128.774" height="534" x="1"/>
+    <filter id="aci-provider-score-copy-d" width="102.6%" height="105.4%" x="-1.3%" y="-2.3%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="aci-provider-score-copy-g" width="202" height="35" rx="3"/>
+    <filter id="aci-provider-score-copy-f" width="115.8%" height="191.4%" x="-7.9%" y="-40%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0"/>
+    </filter>
+    <rect id="aci-provider-score-copy-h" width="24" height="24" x="44" y="197"/>
+    <path id="aci-provider-score-copy-j" d="M2.88,0 L360.96,0 C362.55058,3.0787631e-14 363.84,1.28941992 363.84,2.88 L363.84,313.92 C363.84,315.51058 362.55058,316.8 360.96,316.8 L2.88,316.8 C1.28941992,316.8 -4.24610222e-15,315.51058 -4.4408921e-15,313.92 L-4.4408921e-16,2.88 C-6.3887909e-16,1.28941992 1.28941992,-4.59279649e-15 2.88,-4.88498131e-15 Z"/>
+    <filter id="aci-provider-score-copy-i" width="108%" height="109.2%" x="-4%" y="-3.9%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <path id="aci-provider-score-copy-l" d="M2.88,0 L361.92,0 C363.51058,3.0787631e-14 364.8,1.28941992 364.8,2.88 L364.8,313.92 C364.8,315.51058 363.51058,316.8 361.92,316.8 L2.88,316.8 C1.28941992,316.8 -4.24610222e-15,315.51058 -4.4408921e-15,313.92 L4.4408921e-16,2.88 C2.4929933e-16,1.28941992 1.28941992,-4.14870728e-15 2.88,-4.4408921e-15 Z"/>
+    <filter id="aci-provider-score-copy-k" width="107.9%" height="109.2%" x="-4%" y="-3.9%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <path id="aci-provider-score-copy-n" d="M2.88,0 L361.92,0 C363.51058,3.0787631e-14 364.8,1.28941992 364.8,2.88 L364.8,313.92 C364.8,315.51058 363.51058,316.8 361.92,316.8 L2.88,316.8 C1.28941992,316.8 -4.24610222e-15,315.51058 -4.4408921e-15,313.92 L4.4408921e-16,2.88 C2.4929933e-16,1.28941992 1.28941992,-4.14870728e-15 2.88,-4.4408921e-15 Z"/>
+    <filter id="aci-provider-score-copy-m" width="107.9%" height="109.2%" x="-4%" y="-3.9%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="aci-provider-score-copy-o" width="943" height="28" rx="4"/>
+    <filter id="aci-provider-score-copy-p" width="100.1%" height="103.6%" x="-.1%" y="-1.8%" filterUnits="objectBoundingBox">
+      <feOffset dy="1" in="SourceAlpha" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0"/>
+    </filter>
+    <rect id="aci-provider-score-copy-r" width="175" height="35" rx="3"/>
+    <filter id="aci-provider-score-copy-q" width="118.3%" height="191.4%" x="-9.1%" y="-40%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="1183" height="987" y="122" fill="#F5F5F5"/>
+    <g transform="translate(0 58)">
+      <rect width="1184" height="140" fill="#1E88E5"/>
+      <path fill="#FFF" d="M1141 40C1139.89543 40 1139 39.1045695 1139 38 1139 36.8954305 1139.89543 36 1141 36 1142.10457 36 1143 36.8954305 1143 38 1143 39.1045695 1142.10457 40 1141 40zM1141 34C1139.89543 34 1139 33.1045695 1139 32 1139 30.8954305 1139.89543 30 1141 30 1142.10457 30 1143 30.8954305 1143 32 1143 33.1045695 1142.10457 34 1141 34zM1141 28C1139.89543 28 1139 27.1045695 1139 26 1139 24.8954305 1139.89543 24 1141 24 1142.10457 24 1143 24.8954305 1143 26 1143 27.1045695 1142.10457 28 1141 28zM1090.37408 31.108C1090.37408 31.108 1090.37792 31.1386667 1090.37856 31.1546667L1091.33728 31.108 1093.06784 31.108 1093.06784 24.3333333 1090.69024 26.8046667C1089.28032 25.0846667 1087.07232 24 1084.73504 24 1080.50016 24 1077 27.5886667 1077 32 1077 36.4113333 1080.41696 40 1084.65184 40 1087.6016 40 1090.31264 38.206 1091.57856 35.4293333L1089.83776 34.5713333C1088.88736 36.6546667 1086.83936 38.0006667 1084.62688 38.0006667 1081.45056 38.0006667 1078.8656 35.3086667 1078.8656 32.0006667 1078.8656 28.6926667 1081.44864 26.0006667 1084.62496 26.0006667 1086.46624 26.0006667 1088.10336 26.6213333 1089.15872 28.0253333L1086.22496 31.108 1090.37408 31.108 1090.37408 31.108z"/>
+      <text fill="#FFF" font-family="Roboto-Regular, Roboto" font-size="21">
+        <tspan x="71" y="38">Result Report 12-12-17</tspan>
+      </text>
+      <path fill="#FFF" d="M26,31 L44,31 L44,33 L26,33 L26,31 Z M26,36 L44,36 L44,38 L26,38 L26,36 Z M26,26 L44,26 L44,28 L26,28 L26,26 Z"/>
+    </g>
+    <g transform="translate(0 58)">
+      <g>
+        <rect width="1184" height="64" fill="#1E88E5"/>
+        <g fill="#FFF" font-size="16" transform="translate(60 24)">
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="154" y="15">Dashboard</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-weight="400">
+            <tspan x="0" y="15">MIPSight</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="281" y="15">All Reports</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="408" y="15">Create Report</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="556" y="15">Scorecard</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="678" y="15">Providers</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="795" y="15">Contact</tspan>
+          </text>
+        </g>
+      </g>
+      <text fill="#FFF" font-family="Roboto-Regular, Roboto" font-size="16">
+        <tspan x="1020" y="39">Harriet Becker</tspan>
+      </text>
+      <g transform="translate(980 19)">
+        <use fill="#FFF" opacity=".898" xlink:href="#aci-provider-score-copy-a"/>
+        <path fill="#085083" fill-rule="nonzero" d="M13,0 C5.82081633,0 0,5.82081633 0,13 C0,20.1818367 5.82081633,26 13,26 C20.1818367,26 26,20.1791837 26,13 C26,5.82081633 20.1818367,0 13,0 Z M9.84816327,5.58734694 C10.6891837,4.74632653 11.8061224,4.28469388 13.0026531,4.28469388 C14.1938776,4.28469388 15.3187755,4.74632653 16.1518367,5.58734694 C17.0008163,6.43102041 17.465102,7.54795918 17.465102,8.74183673 C17.465102,9.93306122 17.0008163,11.0473469 16.1518367,11.8910204 C15.3161224,12.7320408 14.1938776,13.1989796 13.0026531,13.1989796 C11.8087755,13.1989796 10.6918367,12.7346939 9.84816327,11.8910204 C9.00714286,11.05 8.54020408,9.93040816 8.54020408,8.74183673 C8.54020408,7.54795918 9.00714286,6.43102041 9.84816327,5.58734694 Z M13,23.4795918 C9.65979592,23.4795918 6.64061224,22.1 4.48897959,19.8767347 C5.46795918,17.0804082 8.08653061,14.9606122 11.0022449,14.9606122 L14.995102,14.9606122 C17.9055102,14.9606122 20.5293878,17.0804082 21.5110204,19.8740816 C19.3567347,22.1 16.3402041,23.4795918 13,23.4795918 Z"/>
+      </g>
+    </g>
+    <g transform="translate(0 150)">
+      <use fill="#000" filter="url(#aci-provider-score-copy-b)" xlink:href="#aci-provider-score-copy-c"/>
+      <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="14" font-weight="400">
+        <tspan x="83.179" y="27">ACI PROVIDER LEVEL SCORECARD</tspan>
+      </text>
+      <g opacity=".6" transform="translate(385.668)">
+        <rect width="412.664" height="48"/>
+        <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="14" font-weight="400">
+          <tspan x="118.562" y="27">ACI TIN LEVEL SCORECARD</tspan>
+        </text>
+      </g>
+      <g opacity=".6" transform="translate(742.41)">
+        <rect width="441.59" height="48"/>
+        <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="14" font-weight="400">
+          <tspan x="175.597" y="27">QUALITY SCORECARD</tspan>
+        </text>
+      </g>
+    </g>
+    <g transform="translate(28 557)">
+      <use fill="#000" filter="url(#aci-provider-score-copy-d)" xlink:href="#aci-provider-score-copy-e"/>
+      <use fill="#FFF" xlink:href="#aci-provider-score-copy-e"/>
+      <g transform="translate(781 15)">
+        <use fill="#000" filter="url(#aci-provider-score-copy-f)" xlink:href="#aci-provider-score-copy-g"/>
+        <use fill="#1E88E5" xlink:href="#aci-provider-score-copy-g"/>
+        <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+          <tspan x="44.191" y="24">What-if analysis</tspan>
+        </text>
+      </g>
+      <path fill="#757575" d="M6,12 L12,12 L12,10 L6,10 L6,12 L6,12 Z M0,0 L0,2 L18,2 L18,0 L0,0 L0,0 Z M3,7 L15,7 L15,5 L3,5 L3,7 L3,7 Z" transform="translate(1043 28)"/>
+      <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="20">
+        <tspan x="27" y="37.5">Advancing Care Information</tspan>
+      </text>
+      <use fill="#D8D8D8" xlink:href="#aci-provider-score-copy-h"/>
+      <rect width="23" height="23" x="44.5" y="197.5" stroke="#979797"/>
+      <g transform="translate(1 171)">
+        <rect width="712" height="49" x="1" y=".5" fill="#FFF"/>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="67" y="31">Bobby Howell</tspan>
+        </text>
+        <g fill="#000" transform="translate(22 14)">
+          <rect width="24" height="24" fill="none"/>
+          <path fill="#1B1B1B" d="M19,5 L19,19 L5,19 L5,5 L19,5 L19,5 Z M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 L19,3 L19,3 Z" opacity=".663"/>
+        </g>
+        <path stroke="#E0E0E0" stroke-linecap="square" d="M0.791566898,49.5 L1127.98283,49.5"/>
+      </g>
+      <g transform="translate(1 371)">
+        <rect width="712" height="49" x="1" y=".5" fill="#FFF"/>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="67" y="31">Dean Hogan</tspan>
+        </text>
+        <g fill="#000" transform="translate(22 14)">
+          <rect width="24" height="24" fill="none"/>
+          <path fill="#1B1B1B" d="M19,5 L19,19 L5,19 L5,5 L19,5 L19,5 Z M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 L19,3 L19,3 Z" opacity=".663"/>
+        </g>
+      </g>
+      <g transform="translate(1 271)">
+        <rect width="712" height="49" x="1" y=".5" fill="#FFF"/>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="67" y="31">Andre Gomez</tspan>
+        </text>
+        <g fill="#000" transform="translate(22 14)">
+          <rect width="24" height="24" fill="none"/>
+          <path fill="#1B1B1B" d="M19,5 L19,19 L5,19 L5,5 L19,5 L19,5 Z M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 L19,3 L19,3 Z" opacity=".663"/>
+        </g>
+        <path stroke="#E0E0E0" stroke-linecap="square" d="M0.791566898,49.5 L1127.98283,49.5"/>
+      </g>
+      <g transform="translate(1 118)">
+        <rect width="712" height="54" x="1" fill="#FFF"/>
+        <g fill="#000" transform="translate(22 16)">
+          <rect width="24" height="24" fill="none"/>
+          <path fill="#1B1B1B" d="M19,5 L19,19 L5,19 L5,5 L19,5 L19,5 Z M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 L19,3 L19,3 Z" opacity=".663"/>
+        </g>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x="67" y="31">Provider Name</tspan>
+        </text>
+        <path stroke="#E0E0E0" stroke-linecap="square" d="M0.791566898,53.5 L1127.98283,53.5"/>
+      </g>
+      <rect width="1128.774" height="54" x="1" y="63" fill="#ECF0F2" fill-opacity=".7"/>
+      <path fill="#757575" d="M2,4 C3.1,4 4,3.1 4,2 C4,0.9 3.1,0 2,0 C0.9,0 0,0.9 0,2 C0,3.1 0.9,4 2,4 L2,4 Z M2,6 C0.9,6 0,6.9 0,8 C0,9.1 0.9,10 2,10 C3.1,10 4,9.1 4,8 C4,6.9 3.1,6 2,6 L2,6 Z M2,12 C0.9,12 0,12.9 0,14 C0,15.1 0.9,16 2,16 C3.1,16 4,15.1 4,14 C4,12.9 3.1,12 2,12 L2,12 Z" transform="translate(1096 26)"/>
+      <text fill="#4A4A4A" font-family="Roboto-Regular, Roboto" font-size="12">
+        <tspan x="27" y="93">1 item selected</tspan>
+      </text>
+      <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="14" font-weight="400">
+        <tspan x="974" y="94">Download Selected</tspan>
+      </text>
+      <path stroke="#E0E0E0" stroke-linecap="square" d="M1.7915669,116.5 L1128.98283,116.5"/>
+      <g transform="translate(0 220)">
+        <rect width="1130.98" height="49" fill="#ECF0F2" fill-opacity=".7"/>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="67" y="31">Sean Peters</tspan>
+        </text>
+        <g transform="translate(22 14)">
+          <rect width="24" height="24"/>
+          <path fill="#1579C1" d="M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 L19,3 Z M10,17 L5,12.1923077 L6.4,10.8461538 L10,14.3076923 L17.6,7 L19,8.34615385 L10,17 L10,17 Z"/>
+        </g>
+        <path stroke="#E0E0E0" stroke-linecap="square" d="M0.791566898,49.5 L1127.98283,49.5"/>
+      </g>
+      <g transform="translate(1 321)">
+        <rect width="712" height="49" x="1" y=".5" fill="#FFF"/>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="67" y="31">Lora Strickland</tspan>
+        </text>
+        <g fill="#000" transform="translate(22 14)">
+          <rect width="24" height="24" fill="none"/>
+          <path fill="#1B1B1B" d="M19,5 L19,19 L5,19 L5,5 L19,5 L19,5 Z M19,3 L5,3 C3.9,3 3,3.9 3,5 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 L19,3 L19,3 Z" opacity=".663"/>
+        </g>
+        <path stroke="#E0E0E0" stroke-linecap="square" d="M0.791566898,49.5 L1127.98283,49.5"/>
+      </g>
+      <g transform="translate(221 138)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="46.4" y="64">50</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="53.7" y="264">0</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="53.7" y="164">0</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".414" y="11">Base Score</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="46.4" y="113">50</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="46.4" y="214">50</tspan>
+        </text>
+      </g>
+      <g transform="translate(334 137)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="56.4" y="65">73</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="56.4" y="265">10</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="56.4" y="165">10</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".998" y="11">Performance</tspan> <tspan x="40.098" y="25">Score</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="56.4" y="114">80</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="56.4" y="215">90</tspan>
+        </text>
+      </g>
+      <g transform="translate(479 138)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.7" y="64">5</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.7" y="264">5</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.7" y="164">5</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".172" y="11">Bonus Score</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.7" y="113">5</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.7" y="214">5</tspan>
+        </text>
+      </g>
+      <g transform="translate(614 138)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="38.101" y="64">140</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="52.7" y="264">0</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="52.7" y="164">0</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".223" y="11">Final Score</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="38.101" y="113">154</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="38.101" y="214">159</tspan>
+        </text>
+      </g>
+      <g transform="translate(745 138)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="31.007" y="64">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="31.007" y="264">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="31.007" y="164">41 / 59</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".006" y="11">E-Prescribing</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="31.007" y="113">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="31.007" y="214">41 / 59</tspan>
+        </text>
+      </g>
+      <g transform="translate(858 137)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.007" y="65">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.007" y="265">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.007" y="165">41 / 59</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".301" y="11">Health information</tspan> <tspan x="49.291" y="25">exchange</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.007" y="114">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="60.007" y="215">41 / 59</tspan>
+        </text>
+      </g>
+      <g transform="translate(1020 137)">
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="41.007" y="65">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="41.007" y="265">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="41.007" y="165">41 / 59</tspan>
+        </text>
+        <text fill="#4A4A4A" font-family="Roboto-Medium, Roboto" font-size="12" font-weight="400">
+          <tspan x=".121" y="11">Provide Patient</tspan> <tspan x="42.625" y="25">Access</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="41.007" y="114">41 / 59</tspan>
+        </text>
+        <text fill="#000" fill-opacity=".87" font-family="Roboto-Regular, Roboto" font-size="13">
+          <tspan x="41.007" y="215">41 / 59</tspan>
+        </text>
+      </g>
+    </g>
+    <g transform="translate(410 221)">
+      <use fill="#000" filter="url(#aci-provider-score-copy-i)" xlink:href="#aci-provider-score-copy-j"/>
+      <use fill="#FFF" xlink:href="#aci-provider-score-copy-j"/>
+      <g transform="translate(23.04 82.56)">
+        <path stroke="#232425" stroke-linecap="square" stroke-width=".96" d="M27.36 185.76L302.20349 185.76M27.36 126.24L302.20349 126.24M27.36 65.76L302.20349 65.76M27.36 6.24L302.20349 6.24" opacity=".2"/>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="34.832" y="208.76">Owens</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="79.884" y="208.76">Sophie</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="125.941" y="208.76">Jessie</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="173.187" y="208.76">Dixon</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="214.741" y="208.76">Derrick</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="265.318" y="208.76">Lela</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x=".352" y="130.04">10%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="6.947" y="189.56">0%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x=".352" y="70.52">20%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x=".352" y="11">30%</tspan>
+        </text>
+      </g>
+      <g fill="#50D166" transform="translate(64.32 106.56)">
+        <rect width="25.92" height="69.969" y="91.311"/>
+        <rect width="25.92" height="160.384" x="44.16" y=".896"/>
+        <rect width="25.92" height="107.28" x="88.32" y="54"/>
+        <rect width="25.92" height="143.28" x="133.44" y="18"/>
+        <rect width="25.92" height="116.28" x="178" y="45"/>
+        <polygon points="221 27.001 246.92 27.001 246.92 161.06 221 161.06"/>
+      </g>
+      <g transform="translate(15.36 15.36)">
+        <text fill="#232425" font-family="Roboto-Medium, Roboto" font-size="19.2" font-weight="400">
+          <tspan x=".38" y="18">Top Providers</tspan>
+        </text>
+        <g opacity=".8" transform="translate(244.84 2.84)">
+          <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52">
+            <tspan x=".919" y="11.96">Age</tspan>
+          </text>
+          <g transform="translate(26.8 1)">
+            <rect width="15.36" height="15.36"/>
+            <polygon fill="#232425" points="8.16 5.76 11.52 10.56 4.8 10.56" transform="matrix(1 0 0 -1 0 16.32)"/>
+          </g>
+        </g>
+        <g opacity=".6" transform="translate(310.08)">
+          <g fill="#232425" transform="translate(1.92 9.6)">
+            <circle cx="1.92" cy="1.92" r="1.92"/>
+            <circle cx="9.6" cy="1.92" r="1.92"/>
+            <circle cx="17.28" cy="1.92" r="1.92"/>
+          </g>
+          <rect width="23.04" height="23.04"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(28 221)">
+      <use fill="#000" filter="url(#aci-provider-score-copy-k)" xlink:href="#aci-provider-score-copy-l"/>
+      <use fill="#FFF" xlink:href="#aci-provider-score-copy-l"/>
+      <g transform="translate(266.48 85.44)">
+        <circle cx="3.84" cy="11.52" r="3.84" fill="#685ED0"/>
+        <circle cx="3.84" cy="86.4" r="3.84" fill="#50D166"/>
+        <circle cx="3.84" cy="160.32" r="3.84" fill="#FF9F00"/>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="15.18" y="113.72">Performance</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Medium, Roboto" font-size="21.12" font-weight="400">
+          <tspan x="15.45" y="20">52.4%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Medium, Roboto" font-size="21.12" font-weight="400">
+          <tspan x="15.45" y="168.8">31.2%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Medium, Roboto" font-size="21.12" font-weight="400">
+          <tspan x="15.45" y="93.92">16.4%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="14.98" y="38.84">Base Score</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".5">
+          <tspan x="15.62" y="188.6">Bonus Score</tspan>
+        </text>
+        <path stroke="#232425" stroke-linecap="square" stroke-width=".96" d="M15.36 57.6L72.96 57.6M15.36 132.48L72.96 132.48" opacity=".2"/>
+      </g>
+      <g transform="translate(53.16 94.48)">
+        <g stroke-width="24.192">
+          <path stroke="#685ED0" d="M86.8854955,173.770991 C134.87103,173.770991 173.770991,134.87103 173.770991,86.8854955 C173.770991,38.8999613 134.87103,0 86.8854955,0 C50.1724326,0 18.7776703,22.7703517 6.05352957,54.9587343 C2.14667736,64.8419363 0,75.6130242 0,86.8854955 C0,131.694561 33.9203461,168.581105 77.4841755,173.268265 C80.5723707,173.600533 83.7090268,173.770991 86.8854955,173.770991 Z"/>
+          <path stroke="#FF9F00" d="M86.8854955,0 C50.1724326,0 18.7776703,22.7703517 6.05352957,54.9587343 C2.14667736,64.8419363 0,75.6130242 0,86.8854955 C0,131.694561 33.9203461,168.581105 77.4841755,173.268265"/>
+          <path stroke="#50D166" d="M6.05352957,54.9587343 C2.14667736,64.8419363 0,75.6130242 0,86.8854955 C0,131.694561 33.9203461,168.581105 77.4841755,173.268265"/>
+        </g>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="33.6">
+          <tspan x="68.633" y="90">97</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".6">
+          <tspan x="38.756" y="111.4">Organization Score</tspan>
+        </text>
+      </g>
+      <g transform="translate(15.36 14.4)">
+        <text fill="#232425" font-family="Roboto-Medium, Roboto" font-size="19.2" font-weight="400">
+          <tspan x=".08" y="18.96">Final Score</tspan>
+        </text>
+        <g fill="#232425" opacity=".6" transform="translate(312.96 9.6)">
+          <circle cx="1.92" cy="1.92" r="1.92"/>
+          <circle cx="9.6" cy="1.92" r="1.92"/>
+          <circle cx="17.28" cy="1.92" r="1.92"/>
+        </g>
+        <g opacity=".8" transform="translate(227.6 2.84)">
+          <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52">
+            <tspan x=".363" y="11.96">Overview</tspan>
+          </text>
+          <g transform="translate(52.72 1)">
+            <rect width="15.36" height="15.36"/>
+            <polygon fill="#232425" points="8.16 5.76 11.52 10.56 4.8 10.56" transform="matrix(1 0 0 -1 0 16.32)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(793 221)">
+      <use fill="#000" filter="url(#aci-provider-score-copy-m)" xlink:href="#aci-provider-score-copy-n"/>
+      <use fill="#FFF" xlink:href="#aci-provider-score-copy-n"/>
+      <path stroke="#232425" stroke-linecap="square" stroke-width=".96" d="M18.24 210.24L341.76 210.24M182.4 236.16L182.4 293.76" opacity=".2"/>
+      <g transform="translate(39.36 78.72)">
+        <path stroke="#232425" stroke-width="26.88" d="M238.08,103.68 C238.08,46.4191171 191.660883,0 134.4,0 C77.1391171,0 30.72,46.4191171 30.72,103.68" opacity=".1"/>
+        <path stroke="#E06950" stroke-width="26.88" d="M205.44,27.84 C186.884828,10.3966839 162.167159,0 135.36,0 C77.4206843,0 30.72,46.8489238 30.72,104.64"/>
+        <text fill="#E06950" font-family="Roboto-Regular, Roboto" font-size="33.6">
+          <tspan x="106.579" y="76.12">790</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".6">
+          <tspan x="74.561" y="99.32">Average Provider Score</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".6">
+          <tspan x=".606" y="104.12">0</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52" opacity=".6">
+          <tspan x="262.582" y="105.08">1000</tspan>
+        </text>
+      </g>
+      <g transform="translate(15.36 15.36)">
+        <text fill="#232425" font-family="Roboto-Medium, Roboto" font-size="19.2" font-weight="400">
+          <tspan x=".08" y="18">Performance</tspan>
+        </text>
+        <g opacity=".8" transform="translate(200.68 3.84)">
+          <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="11.52">
+            <tspan x=".904" y="11.96">Last 6 month</tspan>
+          </text>
+          <g transform="translate(71.96)">
+            <rect width="15.36" height="15.36"/>
+            <polygon fill="#232425" points="8.16 5.76 11.52 10.56 4.8 10.56" transform="matrix(1 0 0 -1 0 16.32)"/>
+          </g>
+        </g>
+        <g opacity=".6" transform="translate(311.04)">
+          <g fill="#232425" transform="translate(1.92 9.6)">
+            <circle cx="1.92" cy="1.92" r="1.92"/>
+            <circle cx="9.6" cy="1.92" r="1.92"/>
+            <circle cx="17.28" cy="1.92" r="1.92"/>
+          </g>
+          <rect width="23.04" height="23.04"/>
+        </g>
+      </g>
+      <g transform="translate(19.36 234.24)">
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="13.44" opacity=".5">
+          <tspan x="18.78" y="55.2">ACI score growth</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="33.6">
+          <tspan x="19.133" y="31">6.43%</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="13.44" opacity=".5">
+          <tspan x="202.36" y="55.2">Provider Growth</tspan>
+        </text>
+        <text fill="#232425" font-family="Roboto-Regular, Roboto" font-size="33.6">
+          <tspan x="202.493" y="31">9.43%</tspan>
+        </text>
+        <circle cx="3.84" cy="17.28" r="3.84" fill="#E06950"/>
+        <circle cx="187.2" cy="17.28" r="3.84" fill="#E06950"/>
+      </g>
+    </g>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="313.24" y="707"></tspan>
+    </text>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="436.24" y="707"></tspan>
+    </text>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="577.24" y="707"></tspan>
+    </text>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="704.24" y="707"></tspan>
+    </text>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="847.24" y="707"></tspan>
+    </text>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="990.24" y="707"></tspan>
+    </text>
+    <text fill="#232425" font-family="material" font-size="11.52">
+      <tspan x="1133.24" y="707"></tspan>
+    </text>
+    <g transform="translate(0 2)">
+      <path fill="#E8E8E8" d="M10.2555408,-4.14336123e-16 L1172.74446,4.14336123e-16 C1176.31053,-2.4074122e-16 1177.60368,0.371302445 1178.90738,1.06853082 C1180.21109,1.76575919 1181.23424,2.78891348 1181.93147,4.09261719 C1182.6287,5.39632089 1183,6.68946584 1183,10.2555408 L1183,56 L0,56 L-1.50013276e-15,10.2555408 C-1.93685099e-15,6.68946584 0.371302445,5.39632089 1.06853082,4.09261719 C1.76575919,2.78891348 2.78891348,1.76575919 4.09261719,1.06853082 C5.39632089,0.371302445 6.68946584,2.4074122e-16 10.2555408,-4.14336123e-16 Z"/>
+      <rect width="12" height="12" x="60" y="22" fill="#28CA42" rx="6"/>
+      <rect width="12" height="12" x="42" y="22" fill="#FFBE2F" rx="6"/>
+      <rect width="12" height="12" x="24" y="22" fill="#FF5F57" rx="6"/>
+      <path fill="#B3B3B3" d="M1135,34 L1159,34 L1159,38 L1135,38 L1135,34 Z M1135,26 L1159,26 L1159,30 L1135,30 L1135,26 Z M1135,18 L1159,18 L1159,22 L1135,22 L1135,18 Z"/>
+      <g transform="translate(120 14)">
+        <use fill="#FFF" xlink:href="#aci-provider-score-copy-o"/>
+        <use fill="#000" filter="url(#aci-provider-score-copy-p)" xlink:href="#aci-provider-score-copy-o"/>
+        <text fill="#000" font-family="ArialMT, Arial" font-size="16">
+          <tspan x="75" y="20">mipsight.com</tspan>
+        </text>
+        <text fill="gray" font-family="ArialMT, Arial" font-size="16">
+          <tspan x="61" y="20">://</tspan>
+        </text>
+        <text fill="#088043" font-family="ArialMT, Arial" font-size="16">
+          <tspan x="26" y="20">https</tspan>
+        </text>
+        <path fill="#088043" d="M14.9298246,12.0178571 L14.9298246,10.8660714 C14.9298246,10.3839262 14.739768,9.96875174 14.3596491,9.62053571 C13.9795303,9.27231969 13.5263184,9.09821429 13,9.09821429 C12.4736816,9.09821429 12.0204697,9.27231969 11.6403509,9.62053571 C11.260232,9.96875174 11.0701754,10.3839262 11.0701754,10.8660714 L11.0701754,12.0178571 L14.9298246,12.0178571 Z M16.7426901,12.0178571 C17.0740757,12.0178571 17.3664705,12.1294632 17.619883,12.3526786 C17.8732956,12.575894 18,12.8392842 18,13.1428571 L18,18.875 C18,19.1785729 17.8732956,19.4419632 17.619883,19.6651786 C17.3664705,19.888394 17.0740757,20 16.7426901,20 L9.25730994,20 C8.92592427,20 8.63352953,19.888394 8.38011696,19.6651786 C8.12670439,19.4419632 8,19.1785729 8,18.875 L8,13.1428571 C8,12.8392842 8.12670439,12.575894 8.38011696,12.3526786 C8.63352953,12.1294632 8.92592427,12.0178571 9.25730994,12.0178571 L9.87134503,12.0178571 L9.87134503,10.8660714 C9.87134503,10.0803532 10.1783595,9.40625281 10.7923977,8.84375 C11.4064358,8.28124719 12.1422959,8 13,8 C13.8577041,8 14.5935642,8.28124719 15.2076023,8.84375 C15.8216405,9.40625281 16.128655,10.0803532 16.128655,10.8660714 L16.128655,12.0178571 L16.7426901,12.0178571 Z"/>
+      </g>
+    </g>
+    <g transform="translate(614 572)">
+      <use fill="#000" filter="url(#aci-provider-score-copy-q)" xlink:href="#aci-provider-score-copy-r"/>
+      <use fill="#1E88E5" xlink:href="#aci-provider-score-copy-r"/>
+      <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+        <tspan x="51.883" y="24">Download</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

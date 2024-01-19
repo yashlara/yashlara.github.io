@@ -1,0 +1,367 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1183" height="958" viewBox="0 0 1183 958">
+  <defs>
+    <circle id="what-if-a" cx="13" cy="13" r="13"/>
+    <rect id="what-if-b" width="1183" height="836"/>
+    <rect id="what-if-e" width="330" height="250" rx="2"/>
+    <filter id="what-if-d" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-g" width="330" height="250" rx="2"/>
+    <filter id="what-if-f" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-i" width="330" height="250" rx="2"/>
+    <filter id="what-if-h" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-k" width="330" height="250" rx="2"/>
+    <filter id="what-if-j" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-m" width="330" height="250" rx="2"/>
+    <filter id="what-if-l" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-o" width="330" height="250" rx="2"/>
+    <filter id="what-if-n" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-q" width="330" height="250" rx="2"/>
+    <filter id="what-if-p" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-s" width="330" height="250" rx="2"/>
+    <filter id="what-if-r" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-u" width="330" height="250" rx="2"/>
+    <filter id="what-if-t" width="108.8%" height="111.6%" x="-4.4%" y="-5%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-w" width="556" height="40" rx="2"/>
+    <filter id="what-if-v" width="105.2%" height="172.5%" x="-2.6%" y="-31.2%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0579710145 0"/>
+    </filter>
+    <rect id="what-if-x" width="943" height="28" rx="4"/>
+    <filter id="what-if-y" width="100.1%" height="103.6%" x="-.1%" y="-1.8%" filterUnits="objectBoundingBox">
+      <feOffset dy="1" in="SourceAlpha" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(0 58)">
+      <g>
+        <rect width="1184" height="64" fill="#1E88E5"/>
+        <g fill="#FFF" font-size="16" transform="translate(60 24)">
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="154" y="15">Dashboard</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-weight="400">
+            <tspan x="0" y="15">MIPSight</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="281" y="15">All Reports</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="408" y="15">Create Report</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="556" y="15">Scorecard</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="678" y="15">Providers</tspan>
+          </text>
+          <text font-family="Roboto-Regular, Roboto">
+            <tspan x="795" y="15">Contact</tspan>
+          </text>
+        </g>
+      </g>
+      <text fill="#FFF" font-family="Roboto-Regular, Roboto" font-size="16">
+        <tspan x="1020" y="39">Harriet Becker</tspan>
+      </text>
+      <g transform="translate(980 19)">
+        <use fill="#FFF" opacity=".898" xlink:href="#what-if-a"/>
+        <path fill="#085083" fill-rule="nonzero" d="M13,0 C5.82081633,0 0,5.82081633 0,13 C0,20.1818367 5.82081633,26 13,26 C20.1818367,26 26,20.1791837 26,13 C26,5.82081633 20.1818367,0 13,0 Z M9.84816327,5.58734694 C10.6891837,4.74632653 11.8061224,4.28469388 13.0026531,4.28469388 C14.1938776,4.28469388 15.3187755,4.74632653 16.1518367,5.58734694 C17.0008163,6.43102041 17.465102,7.54795918 17.465102,8.74183673 C17.465102,9.93306122 17.0008163,11.0473469 16.1518367,11.8910204 C15.3161224,12.7320408 14.1938776,13.1989796 13.0026531,13.1989796 C11.8087755,13.1989796 10.6918367,12.7346939 9.84816327,11.8910204 C9.00714286,11.05 8.54020408,9.93040816 8.54020408,8.74183673 C8.54020408,7.54795918 9.00714286,6.43102041 9.84816327,5.58734694 Z M13,23.4795918 C9.65979592,23.4795918 6.64061224,22.1 4.48897959,19.8767347 C5.46795918,17.0804082 8.08653061,14.9606122 11.0022449,14.9606122 L14.995102,14.9606122 C17.9055102,14.9606122 20.5293878,17.0804082 21.5110204,19.8740816 C19.3567347,22.1 16.3402041,23.4795918 13,23.4795918 Z"/>
+      </g>
+    </g>
+    <g transform="translate(0 122)">
+      <mask id="what-if-c" fill="#fff">
+        <use xlink:href="#what-if-b"/>
+      </mask>
+      <use fill="#F5F5F5" xlink:href="#what-if-b"/>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(52 109)">
+          <g>
+            <use fill="#000" filter="url(#what-if-d)" xlink:href="#what-if-e"/>
+            <use fill="#FFF" xlink:href="#what-if-e"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+          <g transform="translate(0 195)">
+            <rect width="165" height="55" fill="#5DB0F6"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="68.802" y="33.458">Edit</tspan>
+            </text>
+          </g>
+          <g transform="translate(165 195)">
+            <rect width="165" height="55" fill="#1E88E5"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="46.48" y="33.458">Scorecard</tspan>
+            </text>
+          </g>
+          <text font-family="Roboto-Regular, Roboto" font-size="12" letter-spacing=".144">
+            <tspan x="20.5" y="27" fill="#1575C1">Recenty edited</tspan>
+          </text>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(427 109)">
+          <g>
+            <use fill="#000" filter="url(#what-if-f)" xlink:href="#what-if-g"/>
+            <use fill="#FFF" xlink:href="#what-if-g"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+          <g transform="translate(0 195)">
+            <rect width="165" height="55" fill="#5DB0F6"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="68.802" y="33.458">Edit</tspan>
+            </text>
+          </g>
+          <g transform="translate(165 195)">
+            <rect width="165" height="55" fill="#1E88E5"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="46.48" y="33.458">Scorecard</tspan>
+            </text>
+          </g>
+          <text font-family="Roboto-Regular, Roboto" font-size="12" letter-spacing=".144">
+            <tspan x="20.5" y="27" fill="#1575C1">Recenty edited</tspan>
+          </text>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(802 109)">
+          <g>
+            <use fill="#000" filter="url(#what-if-h)" xlink:href="#what-if-i"/>
+            <use fill="#FFF" xlink:href="#what-if-i"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+          <g transform="translate(0 195)">
+            <rect width="165" height="55" fill="#5DB0F6"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="68.802" y="33.458">Edit</tspan>
+            </text>
+          </g>
+          <g transform="translate(165 195)">
+            <rect width="165" height="55" fill="#1E88E5"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="46.48" y="33.458">Scorecard</tspan>
+            </text>
+          </g>
+          <text font-family="Roboto-Regular, Roboto" font-size="12" letter-spacing=".144">
+            <tspan x="20.5" y="27" fill="#1575C1">Recenty edited</tspan>
+          </text>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(52 409)">
+          <g>
+            <use fill="#000" filter="url(#what-if-j)" xlink:href="#what-if-k"/>
+            <use fill="#FFF" xlink:href="#what-if-k"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+          <g transform="translate(0 195)">
+            <rect width="165" height="55" fill="#5DB0F6"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="68.802" y="33.458">Edit</tspan>
+            </text>
+          </g>
+          <g transform="translate(165 195)">
+            <rect width="165" height="55" fill="#1E88E5"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="46.48" y="33.458">Scorecard</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(427 409)">
+          <g>
+            <use fill="#000" filter="url(#what-if-l)" xlink:href="#what-if-m"/>
+            <use fill="#FFF" xlink:href="#what-if-m"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+          <g transform="translate(0 195)">
+            <rect width="165" height="55" fill="#5DB0F6"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="68.802" y="33.458">Edit</tspan>
+            </text>
+          </g>
+          <g transform="translate(165 195)">
+            <rect width="165" height="55" fill="#1E88E5"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="46.48" y="33.458">Scorecard</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(802 409)">
+          <g>
+            <use fill="#000" filter="url(#what-if-n)" xlink:href="#what-if-o"/>
+            <use fill="#FFF" xlink:href="#what-if-o"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+          <g transform="translate(0 195)">
+            <rect width="165" height="55" fill="#5DB0F6"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="68.802" y="33.458">Edit</tspan>
+            </text>
+          </g>
+          <g transform="translate(165 195)">
+            <rect width="165" height="55" fill="#1E88E5"/>
+            <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+              <tspan x="46.48" y="33.458">Scorecard</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(52 709)">
+          <g>
+            <use fill="#000" filter="url(#what-if-p)" xlink:href="#what-if-q"/>
+            <use fill="#FFF" xlink:href="#what-if-q"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(427 709)">
+          <g>
+            <use fill="#000" filter="url(#what-if-r)" xlink:href="#what-if-s"/>
+            <use fill="#FFF" xlink:href="#what-if-s"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(802 709)">
+          <g>
+            <use fill="#000" filter="url(#what-if-t)" xlink:href="#what-if-u"/>
+            <use fill="#FFF" xlink:href="#what-if-u"/>
+          </g>
+          <path fill="#1575C1" d="M311,31 C309.895431,31 309,30.1045695 309,29 C309,27.8954305 309.895431,27 311,27 C312.104569,27 313,27.8954305 313,29 C313,30.1045695 312.104569,31 311,31 Z M311,25 C309.895431,25 309,24.1045695 309,23 C309,21.8954305 309.895431,21 311,21 C312.104569,21 313,21.8954305 313,23 C313,24.1045695 312.104569,25 311,25 Z M311,19 C309.895431,19 309,18.1045695 309,17 C309,15.8954305 309.895431,15 311,15 C312.104569,15 313,15.8954305 313,17 C313,18.1045695 312.104569,19 311,19 Z"/>
+          <text font-family="Roboto-Regular, Roboto" font-size="16">
+            <tspan x="109.32" y="134" fill="#1B1B1B">20 August 2017</tspan>
+          </text>
+          <text font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400">
+            <tspan x="92.026" y="104" fill="#1B1B1B">December Report</tspan>
+          </text>
+        </g>
+      </g>
+      <g mask="url(#what-if-c)">
+        <g transform="translate(314 33)">
+          <use fill="#000" filter="url(#what-if-v)" xlink:href="#what-if-w"/>
+          <use fill="#FFF" xlink:href="#what-if-w"/>
+          <g transform="translate(16 11)">
+            <g opacity=".5" transform="translate(508)">
+              <path fill="#4A4A4A" d="M11.625,10.5 L11.0325,10.5 L10.8225,10.2975 C11.5575,9.4425 12,8.3325 12,7.125 C12,4.4325 9.8175,2.25 7.125,2.25 C4.4325,2.25 2.25,4.4325 2.25,7.125 C2.25,9.8175 4.4325,12 7.125,12 C8.3325,12 9.4425,11.5575 10.2975,10.8225 L10.5,11.0325 L10.5,11.625 L14.25,15.3675 L15.3675,14.25 L11.625,10.5 L11.625,10.5 Z M7.125,10.5 C5.2575,10.5 3.75,8.9925 3.75,7.125 C3.75,5.2575 5.2575,3.75 7.125,3.75 C8.9925,3.75 10.5,5.2575 10.5,7.125 C10.5,8.9925 8.9925,10.5 7.125,10.5 Z"/>
+              <polygon points="0 0 18 0 18 18 0 18"/>
+            </g>
+            <text fill="#4A4A4A" font-family="Roboto-Regular, Roboto" font-size="13" opacity=".7">
+              <tspan x="0" y="14">Search </tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0 2)">
+      <path fill="#E8E8E8" d="M10.2555408,-4.14336123e-16 L1172.74446,4.14336123e-16 C1176.31053,-2.4074122e-16 1177.60368,0.371302445 1178.90738,1.06853082 C1180.21109,1.76575919 1181.23424,2.78891348 1181.93147,4.09261719 C1182.6287,5.39632089 1183,6.68946584 1183,10.2555408 L1183,56 L0,56 L-1.50013276e-15,10.2555408 C-1.93685099e-15,6.68946584 0.371302445,5.39632089 1.06853082,4.09261719 C1.76575919,2.78891348 2.78891348,1.76575919 4.09261719,1.06853082 C5.39632089,0.371302445 6.68946584,2.4074122e-16 10.2555408,-4.14336123e-16 Z"/>
+      <rect width="12" height="12" x="60" y="22" fill="#28CA42" rx="6"/>
+      <rect width="12" height="12" x="42" y="22" fill="#FFBE2F" rx="6"/>
+      <rect width="12" height="12" x="24" y="22" fill="#FF5F57" rx="6"/>
+      <path fill="#B3B3B3" d="M1135,34 L1159,34 L1159,38 L1135,38 L1135,34 Z M1135,26 L1159,26 L1159,30 L1135,30 L1135,26 Z M1135,18 L1159,18 L1159,22 L1135,22 L1135,18 Z"/>
+      <g transform="translate(120 14)">
+        <use fill="#FFF" xlink:href="#what-if-x"/>
+        <use fill="#000" filter="url(#what-if-y)" xlink:href="#what-if-x"/>
+        <text fill="#000" font-family="ArialMT, Arial" font-size="16">
+          <tspan x="75" y="20">mipsight.com</tspan>
+        </text>
+        <text fill="gray" font-family="ArialMT, Arial" font-size="16">
+          <tspan x="61" y="20">://</tspan>
+        </text>
+        <text fill="#088043" font-family="ArialMT, Arial" font-size="16">
+          <tspan x="26" y="20">https</tspan>
+        </text>
+        <path fill="#088043" d="M14.9298246,12.0178571 L14.9298246,10.8660714 C14.9298246,10.3839262 14.739768,9.96875174 14.3596491,9.62053571 C13.9795303,9.27231969 13.5263184,9.09821429 13,9.09821429 C12.4736816,9.09821429 12.0204697,9.27231969 11.6403509,9.62053571 C11.260232,9.96875174 11.0701754,10.3839262 11.0701754,10.8660714 L11.0701754,12.0178571 L14.9298246,12.0178571 Z M16.7426901,12.0178571 C17.0740757,12.0178571 17.3664705,12.1294632 17.619883,12.3526786 C17.8732956,12.575894 18,12.8392842 18,13.1428571 L18,18.875 C18,19.1785729 17.8732956,19.4419632 17.619883,19.6651786 C17.3664705,19.888394 17.0740757,20 16.7426901,20 L9.25730994,20 C8.92592427,20 8.63352953,19.888394 8.38011696,19.6651786 C8.12670439,19.4419632 8,19.1785729 8,18.875 L8,13.1428571 C8,12.8392842 8.12670439,12.575894 8.38011696,12.3526786 C8.63352953,12.1294632 8.92592427,12.0178571 9.25730994,12.0178571 L9.87134503,12.0178571 L9.87134503,10.8660714 C9.87134503,10.0803532 10.1783595,9.40625281 10.7923977,8.84375 C11.4064358,8.28124719 12.1422959,8 13,8 C13.8577041,8 14.5935642,8.28124719 15.2076023,8.84375 C15.8216405,9.40625281 16.128655,10.0803532 16.128655,10.8660714 L16.128655,12.0178571 L16.7426901,12.0178571 Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

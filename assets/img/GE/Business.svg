@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1281" height="805" style="background:#fff" viewBox="0 0 1281 805">
+  <g fill="none" fill-rule="evenodd" transform="translate(3 3)">
+    <rect width="255" height="302" x="765" stroke="#E0E0E0" stroke-width="7"/>
+    <rect width="255" height="604" x="1020" stroke="#E0E0E0" stroke-width="7"/>
+    <rect width="255" height="604" x="510" stroke="#E0E0E0" stroke-width="7"/>
+    <rect width="255" height="302" x="255" stroke="#E0E0E0" stroke-width="7"/>
+    <rect width="255" height="302" x="255" y="302" stroke="#E0E0E0" stroke-width="7"/>
+    <rect width="255" height="604" stroke="#E0E0E0" stroke-width="7"/>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="526.487" y="35">Value Proposition</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="779.462" y="37">Customer Relationships</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="779" y="339">Channels</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="1037.083" y="37">Customer Segments</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="1037" y="83">Stakeholders:</tspan> <tspan x="1037" y="111">Universities</tspan> <tspan x="1037" y="139">Home Builders</tspan> <tspan x="1037" y="167">Housing Societies</tspan> <tspan x="1037" y="195">Shared Hostels</tspan>  <tspan x="1037" y="251">Users:</tspan> <tspan x="1037" y="279">Students</tspan> <tspan x="1037" y="307">Working Professionals</tspan> <tspan x="1037" y="335">People in Shared Spaces</tspan> <tspan x="1037" y="363">Travellers</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="269.429" y="37">Key Activities</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="267" y="339">Key Resources</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="15.372" y="37">Key Partners</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="16" y="641">Cost Structure</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Bold, Proxima Nova" font-size="18" font-weight="bold">
+      <tspan x="655" y="641">Revenue Streams</tspan>
+    </text>
+    <rect width="638" height="195" y="604" stroke="#E0E0E0" stroke-width="7"/>
+    <rect width="637" height="195" x="638" y="604" stroke="#E0E0E0" stroke-width="7"/>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="779" y="83">Acquisition</tspan> <tspan x="779" y="111">Retention</tspan> <tspan x="779" y="139">Switching Cost</tspan> <tspan x="779" y="167">Service and Repair</tspan> <tspan x="779" y="195">Chat, Email &amp; Call</tspan> <tspan x="779" y="223">Warranty &amp; Support</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="779" y="385">Universities stores</tspan> <tspan x="779" y="413">Amazon.com</tspan> <tspan x="779" y="441">Walmart</tspan> <tspan x="779" y="469">GE Online Store</tspan> <tspan x="779" y="497">Dealers &amp; Retailers</tspan> <tspan x="779" y="525">Other Online Stores</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="526" y="83">Lower Price</tspan> <tspan x="526" y="111">Manage Storage</tspan> <tspan x="526" y="139">Food Recipes</tspan> <tspan x="526" y="167">Fresh Food</tspan> <tspan x="526" y="195">Less Wastage</tspan> <tspan x="526" y="223">Power Efficiency</tspan> <tspan x="526" y="251">Manage Grocery</tspan> <tspan x="526" y="279">Health Statistics</tspan> <tspan x="526" y="307">Customizable storage</tspan> <tspan x="526" y="335">Portability</tspan> <tspan x="526" y="363">Compatibility</tspan> <tspan x="526" y="391">Ease of Use</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="269" y="83">Manufacturing</tspan> <tspan x="269" y="111">Repair &amp; Servicing</tspan> <tspan x="269" y="139">Custom Designing</tspan> <tspan x="269" y="167">Rental Services</tspan> <tspan x="269" y="195">App development</tspan> <tspan x="269" y="223">Marketing Products</tspan> <tspan x="269" y="251">Supply Chain Management</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="267" y="385">Manufacturing facilities</tspan> <tspan x="267" y="413">Refrigerator</tspan> <tspan x="267" y="441">Individual Compartments</tspan> <tspan x="267" y="469">Plated for Meal Delivery</tspan> <tspan x="267" y="497">GE Mobile App</tspan> <tspan x="267" y="525">Human Resources</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="14" y="83">Universities</tspan> <tspan x="14" y="111">Home Builders</tspan> <tspan x="14" y="139">Online Stores</tspan> <tspan x="14" y="167">Dealers &amp; Retailers</tspan> 
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="16" y="687">Manufacturing</tspan> <tspan x="16" y="715">Research &amp; App Development</tspan> <tspan x="16" y="743">Hiring &amp; Training employees</tspan> <tspan x="16" y="771">Service &amp; Support</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="655" y="687">Fridge Body Sales</tspan> <tspan x="655" y="715">Compartment Sales</tspan> <tspan x="655" y="743">Refurbish &amp; Repair</tspan> <tspan x="655" y="771">Service parts</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="902" y="686">Meal Kit Suscription</tspan> <tspan x="902" y="714">Delivery Charges</tspan> <tspan x="902" y="742">Rental Services</tspan> <tspan x="902" y="770">In-App Advertising</tspan>
+    </text>
+    <text fill="#000" font-family="ProximaNova-Regular, Proxima Nova" font-size="18">
+      <tspan x="323" y="689">Distribution channels</tspan> <tspan x="323" y="717">Discounts &amp; Subsidies</tspan> <tspan x="323" y="745">Repair &amp; Rental</tspan> <tspan x="323" y="773">Advertising &amp; Marketing</tspan>
+    </text>
+  </g>
+</svg>
