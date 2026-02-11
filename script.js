@@ -68,7 +68,7 @@ updateActiveLink();
 // Scroll-triggered fade-in animations
 // ========================================
 const animatedElements = document.querySelectorAll(
-    '.section-title, .about-content, .timeline-item, .publication-card, .project-card, .blog-card, .contact-content'
+    '.metric-item, .logos-strip, .section-title, .about-content, .timeline-item, .publication-card, .project-card, .blog-card, .contact-content'
 );
 
 animatedElements.forEach(el => el.classList.add('fade-in'));
@@ -86,3 +86,40 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach(el => observer.observe(el));
+
+// ========================================
+// Count-up animation for metrics
+// ========================================
+const metricNumbers = document.querySelectorAll('.metric-number');
+
+const countObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const text = el.textContent;
+                const match = text.match(/(\d+)/);
+                if (match) {
+                    const target = parseInt(match[1]);
+                    const suffix = text.replace(match[1], '');
+                    let current = 0;
+                    const duration = 1200;
+                    const start = performance.now();
+
+                    function step(now) {
+                        const progress = Math.min((now - start) / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        current = Math.round(eased * target);
+                        el.textContent = current + suffix;
+                        if (progress < 1) requestAnimationFrame(step);
+                    }
+                    requestAnimationFrame(step);
+                }
+                countObserver.unobserve(el);
+            }
+        });
+    },
+    { threshold: 0.5 }
+);
+
+metricNumbers.forEach(el => countObserver.observe(el));
