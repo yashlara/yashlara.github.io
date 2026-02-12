@@ -562,7 +562,8 @@ img {
 
 .project-card:hover {
     border-color: var(--color-accent);
-    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
 
 .project-icon {
@@ -728,6 +729,243 @@ img {
 }
 
 /* ========================================
+   Hero Reveal Animation
+   ======================================== */
+.hero-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroReveal 0.8s ease forwards;
+}
+
+.hero-reveal:nth-child(1) { animation-delay: 0.1s; }
+.hero-reveal:nth-child(2) { animation-delay: 0.25s; }
+.hero-reveal:nth-child(3) { animation-delay: 0.4s; }
+.hero-reveal:nth-child(4) { animation-delay: 0.55s; }
+.hero-reveal:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes heroReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Resume Button
+   ======================================== */
+.hero-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border: 1px solid var(--color-text);
+    border-radius: 100px;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
+    margin-left: 8px;
+}
+
+.hero-resume-btn:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+.nav-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ========================================
+   Dark Mode Toggle
+   ======================================== */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition);
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+}
+
+.icon-sun {
+    display: none;
+}
+
+.darkmode .icon-moon {
+    display: none;
+}
+
+.darkmode .icon-sun {
+    display: block;
+}
+
+/* ========================================
+   Dark Mode Colors
+   ======================================== */
+.darkmode {
+    --color-bg: #1a1a1a;
+    --color-bg-alt: #222222;
+    --color-text: #e8e6e3;
+    --color-text-secondary: #b8b4af;
+    --color-text-tertiary: #8a8580;
+    --color-accent: #e8e6e3;
+    --color-accent-light: #2a2a2a;
+    --color-border: #333333;
+    --color-card-bg: #222222;
+}
+
+.darkmode .nav {
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.darkmode .nav-links {
+    background: rgba(26, 26, 26, 0.98);
+}
+
+.darkmode .timeline-marker {
+    background: var(--color-bg-alt);
+}
+
+.darkmode .timeline-item:first-child .timeline-marker {
+    background: var(--color-accent);
+}
+
+.darkmode .google-letters span {
+    color: var(--color-text-tertiary) !important;
+}
+
+.darkmode .deloitte-dot {
+    color: #86BC25;
+}
+
+.darkmode .gt-mark {
+    color: #B3A369;
+}
+
+/* ========================================
+   Enhanced Hover Effects
+   ======================================== */
+.blog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.publication-card {
+    border-radius: var(--radius);
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 -12px;
+}
+
+.publication-card:hover {
+    background: var(--color-bg-alt);
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-text);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.timeline-marker {
+    transition: transform var(--transition);
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.3);
+}
+
+/* ========================================
+   Personal Corner
+   ======================================== */
+.personal-corner {
+    padding: 48px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.personal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.personal-label {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-tertiary);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.reading-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.reading-author {
+    font-size: 0.85rem;
+    color: var(--color-text-tertiary);
+}
+
+.quote-text {
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+    min-height: 3.2em;
+    transition: opacity 0.4s ease;
+}
+
+.quote-author {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    font-style: normal;
+    transition: opacity 0.4s ease;
+}
+
+/* ========================================
    Scroll Animations
    ======================================== */
 .fade-in {
@@ -779,6 +1017,19 @@ img {
         gap: 4px;
     }
 
+    .personal-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero-links {
+        flex-wrap: wrap;
+    }
+
+    .hero-resume-btn {
+        margin-left: 0;
+    }
+
     /* Mobile nav */
     .nav-toggle {
         display: flex;
@@ -810,6 +1061,10 @@ img {
 
     .nav-links a {
         font-size: 1rem;
+    }
+
+    .dark-mode-toggle {
+        margin-left: 8px;
     }
 }
 
