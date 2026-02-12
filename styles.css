@@ -524,6 +524,15 @@ img {
     line-height: 1.4;
 }
 
+.publication-info h3 a {
+    color: var(--color-text);
+    transition: color 0.2s ease;
+}
+
+.publication-info h3 a:hover {
+    color: #2563eb;
+}
+
 .publication-description {
     font-size: 0.9rem;
     color: var(--color-text-secondary);
