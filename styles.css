@@ -1094,3 +1094,121 @@ img {
         left: -24px;
     }
 }
+
+/* ========================================
+   Experience Bullets
+   ======================================== */
+.timeline-bullets {
+    list-style: none;
+    margin-top: 4px;
+}
+
+.timeline-bullets li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.timeline-bullets li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 0.7em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-border);
+}
+
+.timeline-bullets strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* ========================================
+   Skills
+   ======================================== */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.skill-row:first-child {
+    padding-top: 0;
+}
+
+.skill-row:last-child {
+    border-bottom: none;
+}
+
+.skill-category {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: 0.01em;
+    padding-top: 4px;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-item {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    background: var(--color-accent-light);
+    border: 1px solid transparent;
+    padding: 5px 12px;
+    border-radius: 100px;
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.skill-item:hover {
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* ========================================
+   Metric sizing for longer values
+   ======================================== */
+.metric-number {
+    font-size: clamp(1.85rem, 4.6vw, 2.75rem);
+    white-space: nowrap;
+}
+
+/* ========================================
+   About: multi-line detail values
+   ======================================== */
+.detail-value br + * ,
+.detail-value {
+    line-height: 1.5;
+}

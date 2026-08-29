@@ -68,7 +68,7 @@ updateActiveLink();
 // Scroll-triggered fade-in animations
 // ========================================
 const animatedElements = document.querySelectorAll(
-    '.metric-item, .logos-strip, .section-title, .about-content, .timeline-item, .publication-card, .project-card, .blog-card, .contact-content, .currently-reading, .rotating-quote'
+    '.metric-item, .logos-strip, .section-title, .about-content, .timeline-item, .publication-card, .project-card, .skill-row, .contact-content, .currently-reading, .rotating-quote'
 );
 
 animatedElements.forEach(el => el.classList.add('fade-in'));
