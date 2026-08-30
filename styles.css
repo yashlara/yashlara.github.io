@@ -762,33 +762,6 @@ img {
 /* ========================================
    Resume Button
    ======================================== */
-.hero-resume-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 24px;
-    border: 1px solid var(--color-text);
-    border-radius: 100px;
-    color: var(--color-text);
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    transition: all 0.3s ease;
-    margin-left: 8px;
-}
-
-.hero-resume-btn:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
-}
-
-.nav-resume {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
 /* ========================================
    Dark Mode Toggle
    ======================================== */
@@ -1035,10 +1008,6 @@ img {
         flex-wrap: wrap;
     }
 
-    .hero-resume-btn {
-        margin-left: 0;
-    }
-
     /* Mobile nav */
     .nav-toggle {
         display: flex;
@@ -1211,4 +1180,66 @@ img {
 .detail-value br + * ,
 .detail-value {
     line-height: 1.5;
+}
+
+/* ========================================
+   Keyboard Focus
+   ======================================== */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.darkmode a:focus-visible,
+.darkmode button:focus-visible {
+    outline-color: #7aa7ff;
+}
+
+/* Only show the ring for keyboard users, not mouse clicks */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Skip link for keyboard and screen-reader users */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    z-index: 200;
+    padding: 10px 18px;
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    border-radius: 6px;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+/* ========================================
+   Reduced Motion
+   Respect the visitor's OS-level motion preference.
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Reveal animations start hidden — make sure nothing stays invisible */
+    .fade-in,
+    .hero-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }

@@ -1,4 +1,9 @@
 // ========================================
+// Respect the visitor's motion preference
+// ========================================
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ========================================
 // Navigation scroll effect
 // ========================================
 const nav = document.getElementById('nav');
@@ -99,7 +104,7 @@ const countObserver = new IntersectionObserver(
                 const el = entry.target;
                 const text = el.textContent;
                 const match = text.match(/(\d+)/);
-                if (match) {
+                if (match && !prefersReducedMotion) {
                     const target = parseInt(match[1]);
                     const suffix = text.replace(match[1], '');
                     let current = 0;
@@ -178,5 +183,5 @@ if (quoteEl && authorEl) {
         }, 400);
     }
 
-    setInterval(rotateQuote, 6000);
+    if (!prefersReducedMotion) setInterval(rotateQuote, 6000);
 }
