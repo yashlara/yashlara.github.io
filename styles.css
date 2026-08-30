@@ -2,15 +2,19 @@
    CSS Variables & Reset
    ======================================== */
 :root {
-    --color-bg: #ffffff;
-    --color-bg-alt: #f8f8f8;
-    --color-text: #282828;
-    --color-text-secondary: #504945;
-    --color-text-tertiary: #676767;
-    --color-accent: #282828;
-    --color-accent-light: #f0f0f0;
-    --color-border: #e5e5e5;
-    --color-card-bg: #fff;
+    /* Warm editorial palette: paper ground, ink text, terracotta accent */
+    --color-bg: #fbf9f5;
+    --color-bg-alt: #f4efe6;
+    --color-text: #1f1b16;
+    --color-text-secondary: #4a4239;
+    --color-text-tertiary: #8a7f70;
+    --color-accent: #9c4a2c;
+    --color-accent-hover: #7d3a21;
+    --color-accent-light: #f0e6dc;
+    --color-border: #e7dfd3;
+    --color-card-bg: #fffdfa;
+    --shadow-sm: 0 1px 2px rgba(58, 42, 28, 0.04), 0 2px 8px rgba(58, 42, 28, 0.04);
+    --shadow-md: 0 4px 12px rgba(58, 42, 28, 0.07), 0 12px 32px rgba(58, 42, 28, 0.06);
     --font-serif: 'Source Serif 4', Georgia, serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --max-width: 960px;
@@ -185,8 +189,81 @@ img {
     padding-top: var(--nav-height);
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.85fr);
+    gap: 72px;
+    align-items: center;
+    width: 100%;
+}
+
 .hero-content {
     max-width: 600px;
+}
+
+/* Portrait: paper-mounted, slightly tilted, like a photo laid on a page */
+.hero-portrait {
+    position: relative;
+    margin: 0;
+    justify-self: end;
+    max-width: 380px;
+    width: 100%;
+}
+
+.hero-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1489 / 1954;
+    object-fit: cover;
+    border-radius: 3px;
+    background: var(--color-bg-alt);
+    box-shadow: var(--shadow-md);
+    transform: rotate(-1.1deg);
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.hero-portrait:hover img {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+/* Warm paper block sitting behind the photo, offset like a mount */
+.hero-portrait::before {
+    content: '';
+    position: absolute;
+    inset: 18px -16px -18px 16px;
+    background: var(--color-accent-light);
+    border-radius: 3px;
+    transform: rotate(1.4deg);
+    z-index: -1;
+}
+
+.hero-portrait figcaption {
+    margin-top: 20px;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    text-align: right;
+    padding-right: 4px;
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hero-portrait {
+        justify-self: start;
+        max-width: 280px;
+        order: -1;
+    }
+
+    .hero-portrait figcaption {
+        text-align: left;
+    }
 }
 
 .hero-greeting {
@@ -530,7 +607,7 @@ img {
 }
 
 .publication-info h3 a:hover {
-    color: #2563eb;
+    color: var(--color-accent);
 }
 
 .publication-description {
@@ -802,15 +879,19 @@ img {
    Dark Mode Colors
    ======================================== */
 .darkmode {
-    --color-bg: #1a1a1a;
-    --color-bg-alt: #222222;
-    --color-text: #e8e6e3;
-    --color-text-secondary: #b8b4af;
-    --color-text-tertiary: #8a8580;
-    --color-accent: #e8e6e3;
-    --color-accent-light: #2a2a2a;
-    --color-border: #333333;
-    --color-card-bg: #222222;
+    /* Warm dark: not neutral grey — a dim, browned ink */
+    --color-bg: #1a1714;
+    --color-bg-alt: #221e19;
+    --color-text: #ece6dd;
+    --color-text-secondary: #bdb3a5;
+    --color-text-tertiary: #8d8376;
+    --color-accent: #e08a5f;
+    --color-accent-hover: #eda877;
+    --color-accent-light: #2e2620;
+    --color-border: #352f27;
+    --color-card-bg: #221e19;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.22);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.34), 0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
 .darkmode .nav {
@@ -1187,14 +1268,14 @@ img {
    ======================================== */
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
     border-radius: 3px;
 }
 
 .darkmode a:focus-visible,
 .darkmode button:focus-visible {
-    outline-color: #7aa7ff;
+    outline-color: var(--color-accent);
 }
 
 /* Only show the ring for keyboard users, not mouse clicks */
@@ -1242,4 +1323,142 @@ button:focus:not(:focus-visible) {
         opacity: 1 !important;
         transform: none !important;
     }
+}
+
+/* ========================================
+   Editorial Polish
+   Warmth, depth, and rhythm on top of the base layout.
+   ======================================== */
+
+/* Section rules pick up the accent */
+.section-title::after {
+    background: var(--color-accent);
+}
+
+/* Metric numbers become the page's loudest colour moment */
+.metric-number {
+    color: var(--color-accent);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.metric-item {
+    position: relative;
+}
+
+/* Hairline separators between metrics, like a printed table */
+.metric-item + .metric-item::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 8%;
+    height: 84%;
+    width: 1px;
+    background: var(--color-border);
+}
+
+@media (max-width: 768px) {
+    .metric-item + .metric-item::before { display: none; }
+}
+
+/* Cards lift off the paper instead of sitting flat on it */
+.project-card {
+    background: var(--color-card-bg);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius);
+}
+
+.project-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.project-icon {
+    color: var(--color-accent);
+}
+
+.project-card h3 {
+    letter-spacing: -0.01em;
+}
+
+/* Timeline: accent marks the current role */
+.timeline-item:first-child .timeline-marker {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-accent-light);
+}
+
+.timeline-company {
+    color: var(--color-accent);
+}
+
+.timeline-bullets li::before {
+    background: var(--color-accent);
+    opacity: 0.45;
+}
+
+/* Publication years read as editorial marginalia */
+.publication-year {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+}
+
+/* Drop cap opens the About section like a printed essay */
+.about-text > p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--font-serif);
+    font-size: 3.4rem;
+    line-height: 0.82;
+    font-weight: 700;
+    color: var(--color-accent);
+    padding: 6px 10px 0 0;
+}
+
+/* Skills chips warm up */
+.skill-item {
+    background: transparent;
+    border-color: var(--color-border);
+}
+
+.skill-item:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-accent-light);
+}
+
+.skill-category {
+    color: var(--color-accent);
+}
+
+/* Personal corner gets a warm tint and a pulled-quote feel */
+.personal-corner {
+    background: var(--color-bg-alt);
+}
+
+.quote-text {
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.personal-label {
+    color: var(--color-accent);
+}
+
+/* Contact links pick up the accent on hover */
+.contact-link:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+/* Nav underline in accent */
+.nav-links a::after {
+    background: var(--color-accent);
+}
+
+.nav-logo:hover {
+    color: var(--color-accent);
 }
