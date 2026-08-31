@@ -163,41 +163,6 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 // ========================================
-// Rotating quotes
-// ========================================
-const quotes = [
-    { text: '"The best way to predict the future is to invent it."', author: '— Alan Kay' },
-    { text: '"Any sufficiently advanced technology is indistinguishable from magic."', author: '— Arthur C. Clarke' },
-    { text: '"The only way to do great work is to love what you do."', author: '— Steve Jobs' },
-    { text: '"In the middle of difficulty lies opportunity."', author: '— Albert Einstein' },
-    { text: '"Simplicity is the ultimate sophistication."', author: '— Leonardo da Vinci' },
-    { text: '"The measure of intelligence is the ability to change."', author: '— Albert Einstein' },
-    { text: '"First, solve the problem. Then, write the code."', author: '— John Johnson' },
-];
-
-const quoteEl = document.getElementById('rotating-quote');
-const authorEl = document.getElementById('quote-author');
-
-if (quoteEl && authorEl) {
-    let currentQuote = 0;
-
-    function rotateQuote() {
-        quoteEl.style.opacity = '0';
-        authorEl.style.opacity = '0';
-
-        setTimeout(() => {
-            currentQuote = (currentQuote + 1) % quotes.length;
-            quoteEl.textContent = quotes[currentQuote].text;
-            authorEl.textContent = quotes[currentQuote].author;
-            quoteEl.style.opacity = '1';
-            authorEl.style.opacity = '1';
-        }, 400);
-    }
-
-    if (!prefersReducedMotion) setInterval(rotateQuote, 6000);
-}
-
-// ========================================
 // Hero bokeh field
 // Soft coral shapes drifting behind the hero type. Canvas 2D:
 // radial gradients are inherently soft, so no blur filter or
