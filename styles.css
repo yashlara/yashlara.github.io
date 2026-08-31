@@ -2,21 +2,26 @@
    CSS Variables & Reset
    ======================================== */
 :root {
-    /* Warm editorial palette: paper ground, ink text, terracotta accent */
-    --color-bg: #fbf9f5;
-    --color-bg-alt: #f4efe6;
-    --color-text: #1f1b16;
-    --color-text-secondary: #4a4239;
-    --color-text-tertiary: #8a7f70;
-    --color-accent: #9c4a2c;
-    --color-accent-hover: #7d3a21;
-    --color-accent-light: #f0e6dc;
-    --color-border: #e7dfd3;
-    --color-card-bg: #fffdfa;
+    /* Palette after microsoft.ai: cream ground, plum-brown ink, peach + tan */
+    --color-bg: #fef9ed;
+    --color-bg-alt: #fbf0dc;
+    --color-text: #4d2a33;
+    --color-text-secondary: #5d524b;
+    --color-text-tertiary: #9a8b7d;
+    --color-accent: #a67c52;
+    --color-accent-hover: #8a6440;
+    --color-accent-light: #f7ecd9;
+    --color-border: #e8dcc6;
+    --color-card-bg: #fffdf6;
+    --color-peach: #fbd3be;
+    --color-peach-deep: #f7c3aa;
+    --color-cream: #fef9ed;
     --shadow-sm: 0 1px 2px rgba(58, 42, 28, 0.04), 0 2px 8px rgba(58, 42, 28, 0.04);
     --shadow-md: 0 4px 12px rgba(58, 42, 28, 0.07), 0 12px 32px rgba(58, 42, 28, 0.06);
-    --font-serif: 'Source Serif 4', Georgia, serif;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Instrument Serif', 'Newsreader', Georgia, serif;
+    --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Newsreader', Georgia, serif;
+    --font-mono: 'Red Hat Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     --max-width: 960px;
     --nav-height: 64px;
     --radius: 8px;
@@ -890,17 +895,20 @@ img {
    Dark Mode Colors
    ======================================== */
 .darkmode {
-    /* Warm dark: not neutral grey — a dim, browned ink */
-    --color-bg: #1a1714;
-    --color-bg-alt: #221e19;
-    --color-text: #ece6dd;
-    --color-text-secondary: #bdb3a5;
-    --color-text-tertiary: #8d8376;
-    --color-accent: #e08a5f;
-    --color-accent-hover: #eda877;
-    --color-accent-light: #2e2620;
-    --color-border: #352f27;
-    --color-card-bg: #221e19;
+    /* Dark: the same plum-brown ink used as the ground */
+    --color-bg: #2a1a20;
+    --color-bg-alt: #332028;
+    --color-text: #fef9ed;
+    --color-text-secondary: #d6c5bc;
+    --color-text-tertiary: #a18d84;
+    --color-accent: #d4a473;
+    --color-accent-hover: #e3ba8e;
+    --color-accent-light: #3d2831;
+    --color-border: #45303a;
+    --color-card-bg: #332028;
+    --color-peach: #4d2a33;
+    --color-peach-deep: #3a1f27;
+    --color-cream: #fef9ed;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.22);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.34), 0 12px 32px rgba(0, 0, 0, 0.28);
 }
@@ -1581,4 +1589,209 @@ button:focus:not(:focus-visible) {
 
 @media (max-width: 600px) {
     .work-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   microsoft.ai treatment
+   Peach hero, floating cream nav, display serif with italic
+   emphasis, Red Hat Mono for anything that labels rather than reads.
+   ============================================================ */
+
+/* --- Hero: full-bleed peach wash, cream type --- */
+.hero {
+    background:
+        radial-gradient(120% 80% at 50% 0%, var(--color-peach) 0%, var(--color-peach-deep) 70%);
+    text-align: center;
+    padding-top: calc(var(--nav-height) + 40px);
+}
+
+.hero > .container { width: 100%; }
+
+.hero-grid { justify-items: center; }
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.hero-greeting {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin-bottom: 22px;
+}
+
+.hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(3.4rem, 11vw, 8rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.94;
+    color: var(--color-text);
+    margin-bottom: 22px;
+    text-wrap: balance;
+}
+
+/* Their signature move: an italic display line above the roman one */
+.hero-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-text);
+    opacity: 0.88;
+    margin-bottom: 26px;
+    text-wrap: balance;
+}
+
+.hero-title .highlight {
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.hero-description {
+    font-family: var(--font-serif);
+    font-size: 1.06rem;
+    line-height: 1.68;
+    color: var(--color-text-secondary);
+    opacity: 1;
+    max-width: 60ch;
+    margin: 0 auto 40px;
+}
+
+.hero-links { justify-content: center; }
+
+.social-link {
+    color: var(--color-text);
+    border-color: rgba(77, 42, 51, 0.28);
+}
+
+.social-link:hover {
+    color: var(--color-cream);
+    background: var(--color-text);
+    border-color: var(--color-text);
+}
+
+/* --- Nav: a floating cream bar inset from the edges --- */
+.nav {
+    background: transparent;
+    border-bottom: none;
+    padding: 14px 24px 0;
+}
+
+.nav-inner {
+    background: var(--color-cream);
+    border-radius: 14px;
+    padding: 0 22px;
+    box-shadow: 0 1px 3px rgba(77, 42, 51, 0.07);
+    height: 52px;
+}
+
+.nav.scrolled .nav-inner {
+    box-shadow: 0 4px 18px rgba(77, 42, 51, 0.12);
+}
+
+.nav-logo {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+    color: var(--color-text);
+}
+
+.nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--color-text-secondary);
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--color-text); }
+
+.darkmode .nav-inner { background: var(--color-bg-alt); }
+
+/* --- Anything that labels rather than reads sets in mono --- */
+.metric-label,
+.publication-year,
+.work-role,
+.work-meta,
+.detail-label,
+.personal-label,
+.skill-category,
+.skill-item,
+.publication-tag,
+.timeline-date,
+.hero-portrait figcaption {
+    font-family: var(--font-mono);
+}
+
+.metric-label,
+.detail-label,
+.personal-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+/* --- Display serif for section headings --- */
+.section-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    letter-spacing: -0.015em;
+}
+
+.metric-number {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.timeline-header h3,
+.work-card h3,
+.publication-info h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+}
+
+/* --- Rounded, pill-shaped surfaces throughout --- */
+.work-card,
+.project-card,
+.blog-card {
+    border-radius: 14px;
+}
+
+.work-role {
+    font-size: 0.62rem;
+    font-weight: 500;
+    background: var(--color-accent-light);
+    color: var(--color-accent-hover);
+}
+
+.skill-item { border-radius: 100px; }
+
+/* Section rules become tan, matching their restrained accent use */
+.section-title::after { background: var(--color-accent); }
+
+.drop-guard { }
+
+/* Ledes are prose, so they stay in the serif — italic, the way the
+   reference site uses italic for a secondary voice. */
+.section-lede {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-text-tertiary);
+    max-width: 58ch;
+}
+
+.work-footnote {
+    font-family: var(--font-serif);
+    font-style: italic;
 }
