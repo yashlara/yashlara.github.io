@@ -251,6 +251,24 @@ if (quoteEl && authorEl) {
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
+    // Grain tile — built once, then stamped over the field each frame.
+    // Without it the gradients read as flat and plastic.
+    let grain = null;
+    function buildGrain() {
+        const S = 140;
+        const g = document.createElement('canvas');
+        g.width = g.height = S;
+        const gx = g.getContext('2d');
+        const img = gx.createImageData(S, S);
+        for (let i = 0; i < img.data.length; i += 4) {
+            const v = 128 + (Math.random() - 0.5) * 255;
+            img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
+            img.data[i + 3] = 20;
+        }
+        gx.putImageData(img, 0, 0);
+        grain = ctx.createPattern(g, 'repeat');
+    }
+
     function draw(t) {
         // Base wash
         const g = ctx.createLinearGradient(0, 0, w * 0.6, h);
@@ -304,6 +322,13 @@ if (quoteEl && authorEl) {
             ctx.globalCompositeOperation = 'source-over';
         }
 
+        if (grain) {
+            ctx.globalCompositeOperation = 'overlay';
+            ctx.fillStyle = grain;
+            ctx.fillRect(0, 0, w, h);
+            ctx.globalCompositeOperation = 'source-over';
+        }
+
         ctx.globalAlpha = 1;
     }
 
@@ -329,6 +354,7 @@ if (quoteEl && authorEl) {
     function init() {
         resize();
         seed();
+        buildGrain();
         // Exposed so the drift can be frozen when verifying pointer response
         if (window.__heroDebug !== undefined) window.__heroShapes = shapes;
         if (prefersReducedMotion) {

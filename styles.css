@@ -2036,3 +2036,105 @@ button:focus:not(:focus-visible) {
     #value-path { transition: none; }
     .value-panel { transition: none; }
 }
+
+/* ============================================================
+   Work card covers
+   A generated band per tile — CSS gradients rather than image
+   files, so there are no extra requests, nothing to go stale,
+   and they stay crisp at any size. Each tile gets its own
+   composition so the rail reads as nine distinct things.
+   ============================================================ */
+.work-card { padding-top: 0; overflow: hidden; }
+
+.work-art {
+    height: 104px;
+    margin: 0 -26px 22px;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-accent-light);
+}
+
+/* Soft blooms, echoing the hero field */
+.work-art::before,
+.work-art::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(22px);
+    opacity: 0.85;
+}
+
+.work-art::before { width: 150px; height: 92px; }
+.work-art::after  { width: 116px; height: 74px; }
+
+/* 1 — MagenticLite */
+[data-art="0"] .work-art { background: linear-gradient(114deg, #f6d9c6, #efc0a6); }
+[data-art="0"] .work-art::before { background: #e9a184; left: -24px; top: -18px; }
+[data-art="0"] .work-art::after  { background: #fbe7d5; right: -14px; bottom: -24px; }
+
+/* 2 — Fara1.5 Portfolio */
+[data-art="1"] .work-art { background: linear-gradient(128deg, #f2d3c4, #e6ab95); }
+[data-art="1"] .work-art::before { background: #d9866a; right: -20px; top: -22px; }
+[data-art="1"] .work-art::after  { background: #fae0cd; left: 12px; bottom: -26px; }
+
+/* 3 — Fara-7B */
+[data-art="2"] .work-art { background: linear-gradient(100deg, #eed3c0, #dfa98f); }
+[data-art="2"] .work-art::before { background: #c9755a; left: 30%; top: -26px; }
+[data-art="2"] .work-art::after  { background: #f8ddc9; left: -18px; bottom: -20px; }
+
+/* 4 — Phi Reasoning */
+[data-art="3"] .work-art { background: linear-gradient(140deg, #f4dcc8, #e3b79b); }
+[data-art="3"] .work-art::before { background: #d99a72; right: 8px; top: -20px; }
+[data-art="3"] .work-art::after  { background: #fcead9; left: -20px; bottom: -18px; }
+
+/* 5 — Model Release Pipeline */
+[data-art="4"] .work-art { background: linear-gradient(96deg, #efd6c8, #e0ac97); }
+[data-art="4"] .work-art::before { background: #cd8168; left: -16px; bottom: -28px; }
+[data-art="4"] .work-art::after  { background: #f9e2d0; right: 18px; top: -22px; }
+
+/* 6 — Critical Points */
+[data-art="5"] .work-art { background: linear-gradient(150deg, #f2dccb, #ddb49e); }
+[data-art="5"] .work-art::before { background: #c97f66; right: -22px; bottom: -18px; }
+[data-art="5"] .work-art::after  { background: #fbe8d8; left: 24px; top: -24px; }
+
+/* 7 — AgentInstruct */
+[data-art="6"] .work-art { background: linear-gradient(118deg, #f5dbc7, #e5b195); }
+[data-art="6"] .work-art::before { background: #d38f6e; left: 40%; bottom: -26px; }
+[data-art="6"] .work-art::after  { background: #fae4d1; right: -16px; top: -18px; }
+
+/* 8 — Search Generative Experience */
+[data-art="7"] .work-art { background: linear-gradient(134deg, #f0d8c9, #dcae99); }
+[data-art="7"] .work-art::before { background: #c8836b; left: -20px; top: 8px; }
+[data-art="7"] .work-art::after  { background: #f9e6d6; right: 10px; bottom: -24px; }
+
+/* 9 — Google Virtual Try-On */
+[data-art="8"] .work-art { background: linear-gradient(106deg, #f3dccc, #e1b39d); }
+[data-art="8"] .work-art::before { background: #d18a6d; right: 24px; bottom: -22px; }
+[data-art="8"] .work-art::after  { background: #fbe9da; left: -14px; top: -20px; }
+
+/* A hairline keeps the band from bleeding into the card */
+.work-art { border-bottom: 1px solid rgba(77, 42, 51, 0.07); }
+
+.darkmode .work-art { opacity: 0.72; }
+
+/* The icon row sits back under the cover */
+.work-card .work-top { margin-top: 0; }
+
+/* ============================================================
+   Pull quote
+   Breaks the About text and gives the section a focal point.
+   ============================================================ */
+.pull-quote {
+    margin: 30px 0;
+    padding: 4px 0 4px 26px;
+    border-left: 2px solid var(--color-accent);
+}
+
+.pull-quote p {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.4vw, 1.72rem);
+    font-style: italic;
+    line-height: 1.34;
+    color: var(--color-text);
+    text-wrap: balance;
+}
