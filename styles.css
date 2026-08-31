@@ -77,11 +77,11 @@ img {
 }
 
 .section {
-    padding: 96px 0;
+    padding: 132px 0;
 }
 
 .section-alt {
-    background-color: var(--color-bg-alt);
+    /* kept as a hook; no longer paints a different ground */
 }
 
 .section-title {
@@ -1431,7 +1431,6 @@ button:focus:not(:focus-visible) {
 
 /* Personal corner gets a warm tint and a pulled-quote feel */
 .personal-corner {
-    background: var(--color-bg-alt);
 }
 
 .quote-text {
@@ -1809,30 +1808,16 @@ button:focus:not(:focus-visible) {
 }
 
 /* ============================================================
-   Section colour worlds
-   Each section owns a ground, so scrolling moves through
-   distinct rooms rather than one flat page.
+   One continuous ground
+   No alternating bands — spacing and type carry the structure,
+   and the hero stays the only full-bleed moment on the page.
    ============================================================ */
-#metrics        { background: var(--color-bg); }
-#about          { background: var(--color-bg); }
-#experience     { background: #fbf0dc; }
-#publications   { background: var(--color-bg); }
-#projects       { background: #e9ecdf; }   /* sage — their green section, softened */
-#skills         { background: #f9efe0; }
-#contact        { background: #f4e3d7; }
-.personal-corner{ background: #fbf0dc; }
-.footer         { background: #f4e3d7; }
-
-.darkmode #experience      { background: #2f1e26; }
-.darkmode #projects        { background: #24241f; }
-.darkmode #skills          { background: #33222a; }
-.darkmode #contact         { background: #2f1e26; }
-.darkmode .personal-corner { background: #2f1e26; }
-.darkmode .footer          { background: #2f1e26; }
-
-/* Cards need to lift off whichever ground they land on */
-#projects .work-card { background: #fdfdf9; }
-.darkmode #projects .work-card { background: #2c2c26; }
+.section,
+.section-alt,
+.personal-corner,
+.footer {
+    background: var(--color-bg);
+}
 
 /* ============================================================
    Staged reveals
@@ -2252,3 +2237,53 @@ button:focus:not(:focus-visible) {
     letter-spacing: 0.06em;
     color: var(--color-text-tertiary);
 }
+
+/* ============================================================
+   Structure without colour blocks
+   With one ground, the work is done by rhythm, a hairline, and
+   giving cards enough elevation to sit above the page.
+   ============================================================ */
+
+/* A hairline instead of a colour change. Only between sections,
+   never before the first or after the last. */
+.section + .section > .container::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+    opacity: 0.6;
+    margin-top: -132px;
+    margin-bottom: 132px;
+}
+
+/* Cards have to lift now that no band separates them */
+.work-card {
+    background: var(--color-card-bg);
+    border-color: rgba(77, 42, 51, 0.09);
+    box-shadow: 0 1px 2px rgba(77, 42, 51, 0.04),
+                0 8px 24px rgba(77, 42, 51, 0.06);
+}
+
+.work-card:hover {
+    box-shadow: 0 2px 6px rgba(77, 42, 51, 0.07),
+                0 18px 44px rgba(77, 42, 51, 0.10);
+}
+
+.darkmode .work-card {
+    border-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+                0 8px 24px rgba(0, 0, 0, 0.26);
+}
+
+/* The last two blocks were relying on their tint to separate */
+.personal-corner {
+    border-top: 1px solid var(--color-border);
+    padding: 72px 0;
+}
+
+.footer {
+    border-top: 1px solid var(--color-border);
+}
+
+#contact { padding-top: 132px; padding-bottom: 132px; }
