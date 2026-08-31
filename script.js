@@ -208,6 +208,12 @@ if (quoteEl && authorEl) {
     const COUNT = 20;
     let w = 0, h = 0, dpr = 1, shapes = [], raf = null, running = false;
 
+    // Pointer influence, smoothed. Target is where the cursor is;
+    // current chases it so the field eases rather than snaps.
+    const ptr = { tx: 0.5, ty: 0.5, x: 0.5, y: 0.5, active: false };
+    const EASE = 0.045;      // how fast the field catches up
+    const PUSH = 0.30;       // how far a shape is displaced, fraction of hero
+
     function seed() {
         shapes = [];
         for (let i = 0; i < COUNT; i++) {
@@ -219,7 +225,8 @@ if (quoteEl && authorEl) {
                 color: BLOBS[i % BLOBS.length],
                 alpha: 0.42 + Math.random() * 0.38,
                 vx: (Math.random() - 0.5) * 0.000055,
-                vy: (Math.random() - 0.5) * 0.000034
+                vy: (Math.random() - 0.5) * 0.000034,
+                dir: Math.random() < 0.5 ? -1 : 1   // half lead, half trail
             });
         }
     }
@@ -245,8 +252,15 @@ if (quoteEl && authorEl) {
         // together so the field reads as diagonal streaks.
         const ANGLE = -0.62; // ~-35deg
         shapes.forEach(s => {
-            const cx = ((s.x + s.vx * t) % 1.2 - 0.1) * w;
-            const cy = ((s.y + s.vy * t) % 1.2 - 0.1) * h;
+            let cx = ((s.x + s.vx * t) % 1.2 - 0.1) * w;
+            let cy = ((s.y + s.vy * t) % 1.2 - 0.1) * h;
+
+            // Parallax: nearer (larger) shapes react more, which reads
+            // as depth rather than the whole field sliding together.
+            const depth = s.r / 0.31;
+            cx += (ptr.x - 0.5) * PUSH * w * depth * s.dir;
+            cy += (ptr.y - 0.5) * PUSH * h * depth * s.dir * 0.6;
+
             const rad = s.r * w;
 
             ctx.save();
@@ -263,10 +277,28 @@ if (quoteEl && authorEl) {
             ctx.fill();
             ctx.restore();
         });
+        // A soft light tracking the pointer. Screen blending lifts the
+        // field where the cursor is, which reads far more clearly than
+        // displacement alone.
+        if (!prefersReducedMotion) {
+            const lx = ptr.x * w, ly = ptr.y * h;
+            const lr = Math.max(w, h) * 0.40;
+            const lg = ctx.createRadialGradient(lx, ly, 0, lx, ly, lr);
+            lg.addColorStop(0, 'rgba(255, 241, 227, 0.62)');
+            lg.addColorStop(0.45, 'rgba(252, 214, 191, 0.26)');
+            lg.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.globalCompositeOperation = 'screen';
+            ctx.fillStyle = lg;
+            ctx.fillRect(0, 0, w, h);
+            ctx.globalCompositeOperation = 'source-over';
+        }
+
         ctx.globalAlpha = 1;
     }
 
     function frame() {
+        ptr.x += (ptr.tx - ptr.x) * EASE;
+        ptr.y += (ptr.ty - ptr.y) * EASE;
         draw(performance.now());
         raf = requestAnimationFrame(frame);
     }
@@ -286,6 +318,8 @@ if (quoteEl && authorEl) {
     function init() {
         resize();
         seed();
+        // Exposed so the drift can be frozen when verifying pointer response
+        if (window.__heroDebug !== undefined) window.__heroShapes = shapes;
         if (prefersReducedMotion) {
             draw(0);          // one still frame, no animation
         } else {
@@ -294,6 +328,23 @@ if (quoteEl && authorEl) {
     }
 
     init();
+
+    // Pointer tracking — skipped entirely under reduced motion
+    if (!prefersReducedMotion) {
+        hero.addEventListener('pointermove', e => {
+            const r = hero.getBoundingClientRect();
+            ptr.tx = (e.clientX - r.left) / r.width;
+            ptr.ty = (e.clientY - r.top) / r.height;
+            ptr.active = true;
+        }, { passive: true });
+
+        // Drift back to centre when the pointer leaves
+        hero.addEventListener('pointerleave', () => {
+            ptr.tx = 0.5;
+            ptr.ty = 0.5;
+            ptr.active = false;
+        }, { passive: true });
+    }
 
     let rt;
     window.addEventListener('resize', () => {
