@@ -213,8 +213,9 @@ if (quoteEl && authorEl) {
 
     // Sampled from the reference render, lightened enough that the
     // plum type clears WCAG AA against the field.
-    const GROUND = ['#eebba2', '#dd9d85'];
-    const BLOBS = ['#fbe0cd', '#f4c4a9', '#d98a70', '#eaa88e'];
+    // Meadow: forest ground, coral and gold blooms blurred through it
+    const GROUND = ['#3d5136', '#26351f'];
+    const BLOBS = ['#d97e5c', '#e0a24f', '#7d9150', '#c9683f', '#b5c07a'];
 
     const COUNT = 20;
     let w = 0, h = 0, dpr = 1, shapes = [], raf = null, running = false;
@@ -231,10 +232,10 @@ if (quoteEl && authorEl) {
             shapes.push({
                 x: Math.random(),
                 y: Math.random(),
-                r: 0.11 + Math.random() * 0.20,   // radius, fraction of width
+                r: 0.09 + Math.random() * 0.17,   // radius, fraction of width
                 stretch: 3.0 + Math.random() * 3.2, // elongation
                 color: BLOBS[i % BLOBS.length],
-                alpha: 0.42 + Math.random() * 0.38,
+                alpha: 0.30 + Math.random() * 0.30,
                 vx: (Math.random() - 0.5) * 0.000055,
                 vy: (Math.random() - 0.5) * 0.000034,
                 dir: Math.random() < 0.5 ? -1 : 1   // half lead, half trail
@@ -249,6 +250,24 @@ if (quoteEl && authorEl) {
         canvas.width = Math.round(w * dpr);
         canvas.height = Math.round(h * dpr);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    // Grain tile — built once, then tiled over the field. The reference
+    // image is heavily grained; without it the gradients look plastic.
+    let grain = null;
+    function buildGrain() {
+        const S = 140;
+        const g = document.createElement('canvas');
+        g.width = g.height = S;
+        const gx = g.getContext('2d');
+        const img = gx.createImageData(S, S);
+        for (let i = 0; i < img.data.length; i += 4) {
+            const v = 128 + (Math.random() - 0.5) * 255;
+            img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
+            img.data[i + 3] = 26;
+        }
+        gx.putImageData(img, 0, 0);
+        grain = ctx.createPattern(g, 'repeat');
     }
 
     function draw(t) {
@@ -295,11 +314,28 @@ if (quoteEl && authorEl) {
             const lx = ptr.x * w, ly = ptr.y * h;
             const lr = Math.max(w, h) * 0.40;
             const lg = ctx.createRadialGradient(lx, ly, 0, lx, ly, lr);
-            lg.addColorStop(0, 'rgba(255, 241, 227, 0.62)');
-            lg.addColorStop(0.45, 'rgba(252, 214, 191, 0.26)');
+            lg.addColorStop(0, 'rgba(233, 196, 122, 0.17)');
+            lg.addColorStop(0.45, 'rgba(217, 126, 92, 0.09)');
             lg.addColorStop(1, 'rgba(255, 255, 255, 0)');
             ctx.globalCompositeOperation = 'screen';
             ctx.fillStyle = lg;
+            ctx.fillRect(0, 0, w, h);
+            ctx.globalCompositeOperation = 'source-over';
+        }
+
+        // Scrim: the blooms are bright enough that cream type would sit
+        // on 1.45:1 in places. A soft dark pool where the type lives keeps
+        // it readable without dulling the field at the edges.
+        const sc = ctx.createRadialGradient(w * 0.5, h * 0.52, 0, w * 0.5, h * 0.52, Math.max(w, h) * 0.55);
+        sc.addColorStop(0, 'rgba(20, 32, 18, 0.88)');
+        sc.addColorStop(0.55, 'rgba(20, 32, 18, 0.72)');
+        sc.addColorStop(1, 'rgba(20, 32, 18, 0.10)');
+        ctx.fillStyle = sc;
+        ctx.fillRect(0, 0, w, h);
+
+        if (grain) {
+            ctx.globalCompositeOperation = 'overlay';
+            ctx.fillStyle = grain;
             ctx.fillRect(0, 0, w, h);
             ctx.globalCompositeOperation = 'source-over';
         }
@@ -329,6 +365,7 @@ if (quoteEl && authorEl) {
     function init() {
         resize();
         seed();
+        buildGrain();
         // Exposed so the drift can be frozen when verifying pointer response
         if (window.__heroDebug !== undefined) window.__heroShapes = shapes;
         if (prefersReducedMotion) {

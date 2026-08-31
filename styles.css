@@ -2,21 +2,23 @@
    CSS Variables & Reset
    ======================================== */
 :root {
-    /* Palette after microsoft.ai: cream ground, plum-brown ink, peach + tan */
-    --color-bg: #fef9ed;
-    --color-bg-alt: #fbf0dc;
-    --color-text: #4d2a33;
-    --color-text-secondary: #5d524b;
-    --color-text-tertiary: #9a8b7d;
-    --color-accent: #a67c52;        /* decorative rules, icons */
-    --color-accent-text: #7a5638;   /* accent used AS TEXT — meets AA on every ground */
-    --color-accent-hover: #8a6440;
-    --color-accent-light: #f7ecd9;
-    --color-border: #e8dcc6;
-    --color-card-bg: #fffdf6;
-    --color-peach: #fbd3be;
-    --color-peach-deep: #f7c3aa;
-    --color-cream: #fef9ed;
+    /* Meadow palette: forest green, ochre, coral bloom, cream */
+    --color-bg: #fbf8ec;
+    --color-bg-alt: #f2efdd;
+    --color-text: #2b3a2c;
+    --color-text-secondary: #4e5a48;
+    --color-text-tertiary: #86907c;
+    --color-accent: #c08a3e;        /* ochre — decorative rules, icons */
+    --color-accent-text: #7a5320;   /* ochre used AS TEXT — 6.40:1 on cream */
+    --color-accent-hover: #8a6420;
+    --color-accent-light: #f3ecd8;
+    --color-coral: #d97e5c;         /* bloom — decorative */
+    --color-coral-text: #a8502f;    /* bloom as text — 5.12:1 */
+    --color-border: #e2ddc8;
+    --color-card-bg: #fffdf4;
+    --color-forest: #33452f;
+    --color-forest-deep: #26351f;
+    --color-cream: #faf5e8;
     --shadow-sm: 0 1px 2px rgba(58, 42, 28, 0.04), 0 2px 8px rgba(58, 42, 28, 0.04);
     --shadow-md: 0 4px 12px rgba(58, 42, 28, 0.07), 0 12px 32px rgba(58, 42, 28, 0.06);
     --font-display: 'Instrument Serif', 'Newsreader', Georgia, serif;
@@ -896,21 +898,23 @@ img {
    Dark Mode Colors
    ======================================== */
 .darkmode {
-    /* Dark: the same plum-brown ink used as the ground */
-    --color-bg: #2a1a20;
-    --color-bg-alt: #332028;
-    --color-text: #fef9ed;
-    --color-text-secondary: #d6c5bc;
-    --color-text-tertiary: #a18d84;
-    --color-accent: #d4a473;
-    --color-accent-text: #e0b489;
-    --color-accent-hover: #e3ba8e;
-    --color-accent-light: #3d2831;
-    --color-border: #45303a;
-    --color-card-bg: #332028;
-    --color-peach: #4d2a33;
-    --color-peach-deep: #3a1f27;
-    --color-cream: #fef9ed;
+    /* Dark: the forest floor */
+    --color-bg: #1e2a1c;
+    --color-bg-alt: #263323;
+    --color-text: #faf5e8;
+    --color-text-secondary: #c8cdbb;
+    --color-text-tertiary: #939a86;
+    --color-accent: #d6a95e;
+    --color-accent-text: #e0b76a;
+    --color-accent-hover: #e8c47e;
+    --color-accent-light: #33422d;
+    --color-coral: #e08a63;
+    --color-coral-text: #eda184;
+    --color-border: #37452f;
+    --color-card-bg: #263323;
+    --color-forest: #1a241a;
+    --color-forest-deep: #131b12;
+    --color-cream: #faf5e8;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.22);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.34), 0 12px 32px rgba(0, 0, 0, 0.28);
 }
@@ -1569,7 +1573,7 @@ button:focus:not(:focus-visible) {
 .hero {
     /* Fallback only — the canvas paints over this. Matched to the
        canvas ground so a no-JS visitor sees the same field. */
-    background: linear-gradient(150deg, #eebba2 0%, #dd9d85 100%);
+    background: linear-gradient(150deg, #3d5136 0%, #26351f 100%);
     text-align: center;
     padding-top: calc(var(--nav-height) + 40px);
 }
@@ -1589,8 +1593,8 @@ button:focus:not(:focus-visible) {
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-text);
-    opacity: 0.7;
+    color: var(--color-cream);
+    opacity: 0.72;
     margin-bottom: 22px;
 }
 
@@ -1600,7 +1604,7 @@ button:focus:not(:focus-visible) {
     font-weight: 400;
     letter-spacing: -0.02em;
     line-height: 0.94;
-    color: var(--color-text);
+    color: var(--color-cream);
     margin-bottom: 22px;
     text-wrap: balance;
 }
@@ -1612,14 +1616,14 @@ button:focus:not(:focus-visible) {
     font-size: clamp(1.5rem, 3.4vw, 2.5rem);
     font-weight: 400;
     line-height: 1.2;
-    color: var(--color-text);
-    opacity: 0.88;
+    color: var(--color-cream);
+    opacity: 0.9;
     margin-bottom: 26px;
     text-wrap: balance;
 }
 
 .hero-title .highlight {
-    color: var(--color-text);
+    color: var(--color-cream);
     font-weight: 400;
 }
 
@@ -1627,8 +1631,8 @@ button:focus:not(:focus-visible) {
     font-family: var(--font-serif);
     font-size: 1.06rem;
     line-height: 1.68;
-    color: var(--color-text-secondary);
-    opacity: 1;
+    color: var(--color-cream);
+    opacity: 0.82;
     max-width: 60ch;
     margin: 0 auto 40px;
 }
@@ -1636,14 +1640,14 @@ button:focus:not(:focus-visible) {
 .hero-links { justify-content: center; }
 
 .social-link {
-    color: var(--color-text);
-    border-color: rgba(77, 42, 51, 0.28);
+    color: var(--color-cream);
+    border-color: rgba(250, 245, 232, 0.38);
 }
 
 .social-link:hover {
-    color: var(--color-cream);
-    background: var(--color-text);
-    border-color: var(--color-text);
+    color: var(--color-forest);
+    background: var(--color-cream);
+    border-color: var(--color-cream);
 }
 
 /* --- Nav: a floating cream bar inset from the edges --- */
@@ -1815,24 +1819,24 @@ button:focus:not(:focus-visible) {
    ============================================================ */
 #metrics        { background: var(--color-bg); }
 #about          { background: var(--color-bg); }
-#experience     { background: #fbf0dc; }
+#experience     { background: #f2efdd; }
 #publications   { background: var(--color-bg); }
-#projects       { background: #e9ecdf; }   /* sage — their green section, softened */
-#skills         { background: #f9efe0; }
-#contact        { background: #f4e3d7; }
-.personal-corner{ background: #fbf0dc; }
-.footer         { background: #f4e3d7; }
+#projects       { background: #e4e9d5; }   /* sage meadow */
+#skills         { background: #f6f1de; }
+#contact        { background: #e9ecd9; }
+.personal-corner{ background: #f2efdd; }
+.footer         { background: #e9ecd9; }
 
-.darkmode #experience      { background: #2f1e26; }
-.darkmode #projects        { background: #24241f; }
-.darkmode #skills          { background: #33222a; }
-.darkmode #contact         { background: #2f1e26; }
-.darkmode .personal-corner { background: #2f1e26; }
-.darkmode .footer          { background: #2f1e26; }
+.darkmode #experience      { background: #232f20; }
+.darkmode #projects        { background: #1a241a; }
+.darkmode #skills          { background: #232f20; }
+.darkmode #contact         { background: #1a241a; }
+.darkmode .personal-corner { background: #232f20; }
+.darkmode .footer          { background: #1a241a; }
 
 /* Cards need to lift off whichever ground they land on */
-#projects .work-card { background: #fdfdf9; }
-.darkmode #projects .work-card { background: #2c2c26; }
+#projects .work-card { background: #fdfdf4; }
+.darkmode #projects .work-card { background: #26321f; }
 
 /* ============================================================
    Staged reveals
@@ -2035,4 +2039,15 @@ button:focus:not(:focus-visible) {
 @media (prefers-reduced-motion: reduce) {
     #value-path { transition: none; }
     .value-panel { transition: none; }
+}
+
+/* Coral picks up the bloom colour for the role badges */
+.work-role {
+    color: var(--color-coral-text);
+    background: rgba(217, 126, 92, 0.13);
+}
+
+.darkmode .work-role {
+    color: var(--color-coral-text);
+    background: rgba(224, 138, 99, 0.16);
 }
