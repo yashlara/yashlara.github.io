@@ -185,3 +185,129 @@ if (quoteEl && authorEl) {
 
     if (!prefersReducedMotion) setInterval(rotateQuote, 6000);
 }
+
+// ========================================
+// Hero bokeh field
+// Soft coral shapes drifting behind the hero type. Canvas 2D:
+// radial gradients are inherently soft, so no blur filter or
+// shader is required, which keeps this cheap on a laptop GPU.
+// ========================================
+(function () {
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const hero = canvas.parentElement;
+
+    // Sampled from the reference render, lightened enough that the
+    // plum type clears WCAG AA against the field.
+    const GROUND = ['#eebba2', '#dd9d85'];
+    const BLOBS = ['#fbe0cd', '#f4c4a9', '#d98a70', '#eaa88e'];
+
+    const COUNT = 20;
+    let w = 0, h = 0, dpr = 1, shapes = [], raf = null, running = false;
+
+    function seed() {
+        shapes = [];
+        for (let i = 0; i < COUNT; i++) {
+            shapes.push({
+                x: Math.random(),
+                y: Math.random(),
+                r: 0.11 + Math.random() * 0.20,   // radius, fraction of width
+                stretch: 3.0 + Math.random() * 3.2, // elongation
+                color: BLOBS[i % BLOBS.length],
+                alpha: 0.42 + Math.random() * 0.38,
+                vx: (Math.random() - 0.5) * 0.000055,
+                vy: (Math.random() - 0.5) * 0.000034
+            });
+        }
+    }
+
+    function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = hero.clientWidth;
+        h = hero.clientHeight;
+        canvas.width = Math.round(w * dpr);
+        canvas.height = Math.round(h * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function draw(t) {
+        // Base wash
+        const g = ctx.createLinearGradient(0, 0, w * 0.6, h);
+        g.addColorStop(0, GROUND[0]);
+        g.addColorStop(1, GROUND[1]);
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, w, h);
+
+        // Drifting bokeh, drawn as stretched radial gradients rotated
+        // together so the field reads as diagonal streaks.
+        const ANGLE = -0.62; // ~-35deg
+        shapes.forEach(s => {
+            const cx = ((s.x + s.vx * t) % 1.2 - 0.1) * w;
+            const cy = ((s.y + s.vy * t) % 1.2 - 0.1) * h;
+            const rad = s.r * w;
+
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.rotate(ANGLE);
+            ctx.scale(s.stretch, 1);
+            const rg = ctx.createRadialGradient(0, 0, 0, 0, 0, rad);
+            rg.addColorStop(0, s.color);
+            rg.addColorStop(1, 'rgba(255,255,255,0)');
+            ctx.globalAlpha = s.alpha;
+            ctx.fillStyle = rg;
+            ctx.beginPath();
+            ctx.arc(0, 0, rad, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+        });
+        ctx.globalAlpha = 1;
+    }
+
+    function frame() {
+        draw(performance.now());
+        raf = requestAnimationFrame(frame);
+    }
+
+    function start() {
+        if (running || prefersReducedMotion) return;
+        running = true;
+        frame();
+    }
+
+    function stop() {
+        running = false;
+        if (raf) cancelAnimationFrame(raf);
+        raf = null;
+    }
+
+    function init() {
+        resize();
+        seed();
+        if (prefersReducedMotion) {
+            draw(0);          // one still frame, no animation
+        } else {
+            start();
+        }
+    }
+
+    init();
+
+    let rt;
+    window.addEventListener('resize', () => {
+        clearTimeout(rt);
+        rt = setTimeout(() => { resize(); draw(performance.now()); }, 150);
+    });
+
+    // Don't burn frames when the hero is offscreen or the tab is hidden
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(entries => {
+            entries.forEach(e => e.isIntersecting ? start() : stop());
+        }, { threshold: 0 }).observe(hero);
+    }
+    document.addEventListener('visibilitychange', () => {
+        document.hidden ? stop() : start();
+    });
+})();

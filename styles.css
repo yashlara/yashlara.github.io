@@ -1599,8 +1599,9 @@ button:focus:not(:focus-visible) {
 
 /* --- Hero: full-bleed peach wash, cream type --- */
 .hero {
-    background:
-        radial-gradient(120% 80% at 50% 0%, var(--color-peach) 0%, var(--color-peach-deep) 70%);
+    /* Fallback only — the canvas paints over this. Matched to the
+       canvas ground so a no-JS visitor sees the same field. */
+    background: linear-gradient(150deg, #eebba2 0%, #dd9d85 100%);
     text-align: center;
     padding-top: calc(var(--nav-height) + 40px);
 }
@@ -1795,3 +1796,32 @@ button:focus:not(:focus-visible) {
     font-family: var(--font-serif);
     font-style: italic;
 }
+
+/* ============================================================
+   Hero bokeh field
+   Soft coral shapes drifting behind the type, after the WebGL
+   background on microsoft.ai. Canvas 2D rather than WebGL —
+   radial gradients are already soft, so no shader is needed.
+   ============================================================ */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    /* The CSS gradient is the fallback if canvas never paints */
+}
+
+.hero > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Dark mode: the field recedes so cream type stays readable */
+.darkmode .hero-canvas { opacity: 0.42; }
