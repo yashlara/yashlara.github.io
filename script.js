@@ -73,10 +73,19 @@ updateActiveLink();
 // Scroll-triggered fade-in animations
 // ========================================
 const animatedElements = document.querySelectorAll(
-    '.metric-item, .logos-strip, .section-title, .about-content, .timeline-item, .publication-card, .work-card, .skill-row, .contact-content, .currently-reading, .rotating-quote'
+    '.logos-strip, .section-title, .about-content, .timeline-item, .contact-content, .currently-reading, .rotating-quote'
 );
 
 animatedElements.forEach(el => el.classList.add('fade-in'));
+
+// Groups whose children should arrive in sequence rather than together
+document.querySelectorAll('.work-rail, .metrics-grid, .value-list, .publications-list')
+    .forEach(group => {
+        group.classList.add('stagger');
+        [...group.children].forEach((child, i) => {
+            child.style.transitionDelay = Math.min(i * 70, 560) + 'ms';
+        });
+    });
 
 const observer = new IntersectionObserver(
     (entries) => {
@@ -91,6 +100,8 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach(el => observer.observe(el));
+
+document.querySelectorAll('.stagger').forEach(el => observer.observe(el));
 
 // ========================================
 // Count-up animation for metrics
@@ -361,4 +372,117 @@ if (quoteEl && authorEl) {
     document.addEventListener('visibilitychange', () => {
         document.hidden ? stop() : start();
     });
+})();
+
+// ========================================
+// Work rail — nudge buttons + edge state
+// Native scroll-snap does the scrolling; this only drives the
+// buttons and their disabled state.
+// ========================================
+(function () {
+    const rail = document.getElementById('work-rail');
+    const prev = document.getElementById('rail-prev');
+    const next = document.getElementById('rail-next');
+    if (!rail || !prev || !next) return;
+
+    function step() {
+        const card = rail.querySelector('.work-card');
+        if (!card) return rail.clientWidth * 0.8;
+        const gap = parseFloat(getComputedStyle(rail).columnGap) || 20;
+        return card.getBoundingClientRect().width + gap;
+    }
+
+    function sync() {
+        const max = rail.scrollWidth - rail.clientWidth;
+        // scroll-snap settles on the first card's snap point, which sits
+        // at the rail's inline padding rather than exactly 0.
+        const pad = parseFloat(getComputedStyle(rail).paddingLeft) || 0;
+        prev.disabled = rail.scrollLeft <= pad + 4;
+        next.disabled = rail.scrollLeft >= max - 4;
+    }
+
+    prev.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: prefersReducedMotion ? 'auto' : 'smooth' }));
+    next.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: prefersReducedMotion ? 'auto' : 'smooth' }));
+    rail.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+})();
+
+// ========================================
+// Values list — active item + drawn connector
+// The line is generated from the live positions of the active
+// name and its panel, so it stays correct through resize and
+// reflow rather than being a fixed path.
+// ========================================
+(function () {
+    const wrap = document.querySelector('.values');
+    const list = document.getElementById('value-list');
+    const svg = document.getElementById('value-link');
+    const path = document.getElementById('value-path');
+    if (!wrap || !list || !svg || !path) return;
+
+    const items = [...list.querySelectorAll('.value-item')];
+    const panels = [...wrap.querySelectorAll('.value-panel')];
+    let active = 0;
+
+    function drawLink() {
+        if (window.innerWidth <= 860) return;
+        const box = wrap.getBoundingClientRect();
+        const name = items[active].querySelector('.value-name').getBoundingClientRect();
+        const panel = panels[active].getBoundingClientRect();
+
+        const x1 = name.right - box.left + 14;
+        const y1 = name.top - box.top + name.height / 2;
+        const x2 = panel.left - box.left - 14;
+        const y2 = panel.top - box.top + 26;
+
+        const dx = Math.max(40, (x2 - x1) * 0.5);
+        // A loop in the middle, the way a hand-drawn connector wanders
+        const loopR = Math.min(26, Math.abs(x2 - x1) * 0.16);
+        const mx = (x1 + x2) / 2;
+        const my = (y1 + y2) / 2;
+
+        const d = [
+            `M ${x1.toFixed(1)} ${y1.toFixed(1)}`,
+            `C ${(x1 + dx * 0.5).toFixed(1)} ${y1.toFixed(1)}, ${(mx - loopR).toFixed(1)} ${(my + loopR * 1.5).toFixed(1)}, ${mx.toFixed(1)} ${my.toFixed(1)}`,
+            `C ${(mx + loopR).toFixed(1)} ${(my - loopR * 1.5).toFixed(1)}, ${(x2 - dx * 0.5).toFixed(1)} ${y2.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`
+        ].join(' ');
+
+        svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+        path.setAttribute('d', d);
+        // Re-trigger the draw
+        path.classList.remove('drawn');
+        void path.getBoundingClientRect();
+        path.classList.add('drawn');
+    }
+
+    function setActive(i) {
+        if (i === active) return;
+        active = i;
+        items.forEach((el, n) => {
+            el.classList.toggle('is-active', n === i);
+            el.querySelector('.value-name').setAttribute('aria-expanded', String(n === i));
+        });
+        panels.forEach((el, n) => el.classList.toggle('is-active', n === i));
+        drawLink();
+    }
+
+    items.forEach((el, i) => {
+        const btn = el.querySelector('.value-name');
+        btn.addEventListener('mouseenter', () => setActive(i));
+        btn.addEventListener('focus', () => setActive(i));
+        btn.addEventListener('click', () => setActive(i));
+    });
+
+    // Scroll advances through the values while the section is in view
+    if ('IntersectionObserver' in window && !prefersReducedMotion) {
+        new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) drawLink(); });
+        }, { threshold: 0.35 }).observe(wrap);
+    }
+
+    let vt;
+    window.addEventListener('resize', () => { clearTimeout(vt); vt = setTimeout(drawLink, 140); });
+    window.addEventListener('load', drawLink);
+    setTimeout(drawLink, 300);
 })();

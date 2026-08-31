@@ -8,7 +8,8 @@
     --color-text: #4d2a33;
     --color-text-secondary: #5d524b;
     --color-text-tertiary: #9a8b7d;
-    --color-accent: #a67c52;
+    --color-accent: #a67c52;        /* decorative rules, icons */
+    --color-accent-text: #7a5638;   /* accent used AS TEXT — meets AA on every ground */
     --color-accent-hover: #8a6440;
     --color-accent-light: #f7ecd9;
     --color-border: #e8dcc6;
@@ -902,6 +903,7 @@ img {
     --color-text-secondary: #d6c5bc;
     --color-text-tertiary: #a18d84;
     --color-accent: #d4a473;
+    --color-accent-text: #e0b489;
     --color-accent-hover: #e3ba8e;
     --color-accent-light: #3d2831;
     --color-border: #45303a;
@@ -1204,28 +1206,6 @@ img {
 /* ========================================
    Skills
    ======================================== */
-.skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.skill-row {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 24px;
-    padding: 22px 0;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.skill-row:first-child {
-    padding-top: 0;
-}
-
-.skill-row:last-child {
-    border-bottom: none;
-}
-
 .skill-category {
     font-family: var(--font-sans);
     font-size: 0.85rem;
@@ -1260,11 +1240,7 @@ img {
 }
 
 @media (max-width: 768px) {
-    .skill-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
     }
-}
 
 /* ========================================
    Metric sizing for longer values
@@ -1497,12 +1473,6 @@ button:focus:not(:focus-visible) {
    Work tiles
    The centrepiece: what was built, and what the role was.
    ======================================== */
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
 .work-card {
     display: flex;
     flex-direction: column;
@@ -1584,12 +1554,10 @@ button:focus:not(:focus-visible) {
 }
 
 @media (max-width: 900px) {
-    .work-grid { grid-template-columns: repeat(2, 1fr); }
-}
+    }
 
 @media (max-width: 600px) {
-    .work-grid { grid-template-columns: 1fr; }
-}
+    }
 
 /* ============================================================
    microsoft.ai treatment
@@ -1825,3 +1793,246 @@ button:focus:not(:focus-visible) {
 
 /* Dark mode: the field recedes so cream type stays readable */
 .darkmode .hero-canvas { opacity: 0.42; }
+
+/* ============================================================
+   Accent as text
+   The decorative tan is only 3.1-3.6:1 on these grounds, so
+   anything that has to be READ uses the darker variant.
+   ============================================================ */
+.timeline-company,
+.skill-category,
+.work-role,
+.personal-label,
+.publication-info h3 a:hover,
+.contact-link:hover {
+    color: var(--color-accent-text);
+}
+
+/* ============================================================
+   Section colour worlds
+   Each section owns a ground, so scrolling moves through
+   distinct rooms rather than one flat page.
+   ============================================================ */
+#metrics        { background: var(--color-bg); }
+#about          { background: var(--color-bg); }
+#experience     { background: #fbf0dc; }
+#publications   { background: var(--color-bg); }
+#projects       { background: #e9ecdf; }   /* sage — their green section, softened */
+#skills         { background: #f9efe0; }
+#contact        { background: #f4e3d7; }
+.personal-corner{ background: #fbf0dc; }
+.footer         { background: #f4e3d7; }
+
+.darkmode #experience      { background: #2f1e26; }
+.darkmode #projects        { background: #24241f; }
+.darkmode #skills          { background: #33222a; }
+.darkmode #contact         { background: #2f1e26; }
+.darkmode .personal-corner { background: #2f1e26; }
+.darkmode .footer          { background: #2f1e26; }
+
+/* Cards need to lift off whichever ground they land on */
+#projects .work-card { background: #fdfdf9; }
+.darkmode #projects .work-card { background: #2c2c26; }
+
+/* ============================================================
+   Staged reveals
+   Children arrive in sequence rather than all at once.
+   ============================================================ */
+.stagger > * {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.62s cubic-bezier(0.22, 0.7, 0.3, 1),
+                transform 0.62s cubic-bezier(0.22, 0.7, 0.3, 1);
+}
+
+.stagger.visible > * {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stagger > *,
+    .stagger.visible > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* ============================================================
+   Work rail
+   A horizontal strip of tiles, like their article carousel.
+   Native scroll-snap does the work; the buttons just nudge it,
+   so touch, trackpad and keyboard all behave without extra code.
+   ============================================================ */
+.work-rail-wrap { position: relative; }
+
+.work-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 320px);
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 4px 4px 22px;
+    margin: 0 -4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+}
+
+.work-rail > .work-card {
+    scroll-snap-align: start;
+    height: auto;
+}
+
+.work-rail::-webkit-scrollbar { height: 6px; }
+.work-rail::-webkit-scrollbar-track { background: transparent; }
+.work-rail::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 100px;
+}
+
+.work-rail:focus-visible {
+    outline: 2px solid var(--color-accent-text);
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+
+.work-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.rail-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 1px solid var(--color-border);
+    background: var(--color-card-bg);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background var(--transition), border-color var(--transition),
+                color var(--transition), opacity var(--transition);
+}
+
+.rail-btn:hover:not(:disabled) {
+    background: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-bg);
+}
+
+.rail-btn:disabled {
+    opacity: 0.32;
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-rail { scroll-behavior: auto; }
+}
+
+/* ============================================================
+   Values list with a drawn connector
+   Their "Our Values" pattern: the inactive items recede, and a
+   hand-drawn line links the active one to its description.
+   ============================================================ */
+.values {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 90px;
+    align-items: start;
+}
+
+.value-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.value-item + .value-item { margin-top: 6px; }
+
+.value-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+    color: var(--color-text-tertiary);
+    background: none;
+    border: 0;
+    padding: 2px 0;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.42s ease, opacity 0.42s ease;
+}
+
+.value-item.is-active .value-name { color: var(--color-text); }
+.value-name:hover { color: var(--color-accent-text); }
+
+/* The connector sits between the two columns */
+.value-link {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    color: var(--color-accent);
+    overflow: visible;
+}
+
+#value-path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.75s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+
+#value-path.drawn { stroke-dashoffset: 0; }
+
+.value-panels { position: relative; min-height: 210px; }
+
+.value-panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.value-panel.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    position: relative;
+}
+
+.value-blurb {
+    font-family: var(--font-serif);
+    font-size: 1.12rem;
+    line-height: 1.62;
+    color: var(--color-text-secondary);
+    margin-bottom: 22px;
+    max-width: 46ch;
+}
+
+.value-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media (max-width: 860px) {
+    .values { grid-template-columns: 1fr; gap: 28px; }
+    .value-link { display: none; }
+    .value-panels { min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #value-path { transition: none; }
+    .value-panel { transition: none; }
+}

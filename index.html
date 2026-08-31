@@ -82,7 +82,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Work</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Focus</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
@@ -317,7 +317,8 @@
         <div class="container">
             <h2 class="section-title">Selected Work</h2>
             <p class="section-lede">The work I&rsquo;m closest to, most recent first. Each tile says what my role actually was.</p>
-            <div class="work-grid">
+            <div class="work-rail-wrap">
+            <div class="work-rail" id="work-rail" role="region" aria-label="Selected work" tabindex="0">
                 <article class="work-card">
                     <div class="work-top">
                         <span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span>
@@ -400,6 +401,15 @@
                     <span class="work-meta">Google &middot; 2023</span>
                 </article>
             </div>
+            <div class="work-controls">
+                <button class="rail-btn" id="rail-prev" aria-label="Previous work" aria-controls="work-rail">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="rail-btn" id="rail-next" aria-label="Next work" aria-controls="work-rail">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+            </div>
             <p class="work-footnote">Also: won the Executive Challenge at Microsoft&rsquo;s Global Hackathon 2025, and speak and review at MLADS.</p>
         </div>
     </section>
@@ -407,42 +417,38 @@
     <!-- Skills Section -->
     <section class="section" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-list">
-                <div class="skill-row">
-                    <span class="skill-category">Program &amp; Release</span>
-                    <div class="skill-items">
-                        <span class="skill-item">Release Management</span>
-                        <span class="skill-item">Launch Readiness Reviews</span>
-                        <span class="skill-item">Dependency Tracking</span>
-                        <span class="skill-item">Responsible AI Review</span>
+            <h2 class="section-title">What I Work On</h2>
+            <p class="section-lede">Three things I'm responsible for. Hover or scroll to move between them.</p>
+            <div class="values">
+                <ul class="value-list" id="value-list">
+                    <li class="value-item is-active" data-index="0">
+                        <button class="value-name" type="button" aria-expanded="true" aria-controls="value-panel">Program &amp; Release</button>
+                    </li>
+                    <li class="value-item" data-index="1">
+                        <button class="value-name" type="button" aria-expanded="false" aria-controls="value-panel">Models &amp; Safety</button>
+                    </li>
+                    <li class="value-item" data-index="2">
+                        <button class="value-name" type="button" aria-expanded="false" aria-controls="value-panel">Technical &amp; Ecosystem</button>
+                    </li>
+                </ul>
+
+                <svg class="value-link" id="value-link" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+                    <path id="value-path" fill="none" stroke="currentColor" stroke-width="1.3"
+                          stroke-linecap="round" pathLength="1"/>
+                </svg>
+
+                <div class="value-panels" id="value-panel">
+                    <div class="value-panel is-active" data-index="0">
+                        <p class="value-blurb">Release management, launch readiness reviews, dependency tracking, and Responsible AI review — the machinery that gets a model from ready to shipped.</p>
+                        <div class="value-chips"><span class="skill-item">Release Management</span><span class="skill-item">Launch Readiness Reviews</span><span class="skill-item">Dependency Tracking</span><span class="skill-item">Responsible AI Review</span></div>
                     </div>
-                </div>
-                <div class="skill-row">
-                    <span class="skill-category">Models &amp; Safety</span>
-                    <div class="skill-items">
-                        <span class="skill-item">LLMs</span>
-                        <span class="skill-item">SLMs</span>
-                        <span class="skill-item">Reasoning &amp; Multimodal Models</span>
-                        <span class="skill-item">Agentic Systems</span>
-                        <span class="skill-item">Computer Use Agents</span>
-                        <span class="skill-item">Synthetic Data</span>
-                        <span class="skill-item">SFT / DPO</span>
-                        <span class="skill-item">RLHF</span>
-                        <span class="skill-item">Red-teaming</span>
-                        <span class="skill-item">Benchmark Design</span>
+                    <div class="value-panel" data-index="1">
+                        <p class="value-blurb">Reasoning and multimodal models, agentic systems, and the evaluation and red-teaming work that decides whether they are safe to release.</p>
+                        <div class="value-chips"><span class="skill-item">LLMs</span><span class="skill-item">SLMs</span><span class="skill-item">Reasoning &amp; Multimodal</span><span class="skill-item">Agentic Systems</span><span class="skill-item">Computer Use Agents</span><span class="skill-item">Synthetic Data</span><span class="skill-item">SFT / DPO</span><span class="skill-item">RLHF</span><span class="skill-item">Red-teaming</span><span class="skill-item">Benchmark Design</span></div>
                     </div>
-                </div>
-                <div class="skill-row">
-                    <span class="skill-category">Technical &amp; Ecosystem</span>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Multi-Agent Frameworks</span>
-                        <span class="skill-item">Model Serving</span>
-                        <span class="skill-item">Azure AI Foundry</span>
-                        <span class="skill-item">Hugging Face</span>
-                        <span class="skill-item">MCP</span>
+                    <div class="value-panel" data-index="2">
+                        <p class="value-blurb">The tooling underneath — multi-agent frameworks, serving, and the platforms models actually ship on.</p>
+                        <div class="value-chips"><span class="skill-item">Python</span><span class="skill-item">SQL</span><span class="skill-item">Multi-Agent Frameworks</span><span class="skill-item">Model Serving</span><span class="skill-item">Azure AI Foundry</span><span class="skill-item">Hugging Face</span><span class="skill-item">MCP</span></div>
                     </div>
                 </div>
             </div>
